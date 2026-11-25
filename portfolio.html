@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore my frontend development portfolio featuring projects built with HTML, CSS, Tailwind CSS, JavaScript, and modern web tools." />
+    <link rel="icon" type="image/svg+xml" href="/My-Portfolio/favicon.png" />
+    <title>Portfolio | Anna Zakharova</title>
+  <script type="module" crossorigin src="/My-Portfolio/assets/portfolio-C0ymNONN.js"></script>
+  <link rel="modulepreload" crossorigin href="/My-Portfolio/assets/main-D6DfyADp.js">
+  <link rel="stylesheet" crossorigin href="/My-Portfolio/assets/main-DCu-qPUy.css">
+</head>
+<body>
+
+
+<!--  header -->
+<header class="sticky top-0 left-0 z-20 bg-(--color-block-main)  dark:bg-(--color-secondary-lightBrown2) h-[60px] flex items-center">
+    <div class="container w-full">
+        <nav class="flex items-center justify-between">
+            <a href="./index.html"  target="_blank" class="header-logo"  ><div class="w-[38px] h-auto"><img alt="Main page - Anna Zakharova" class="w-[38px] h-auto cover" src="/My-Portfolio/assets/logo-DWtN4wd1.png"></div></a>
+            <div class="header-nav flex items-center gap-[60px] tracking-[1.2px]">
+                <a href="./index.html#about" target="_blank" data-i18n="nav.about">ABOUT ME</a>
+                <a href="./index.html#skills" target="_blank" data-i18n="nav.skills">SKILLS</a>
+                <a href="/portfolio.html"  data-i18n="nav.portfolio">PORTFOLIO</a>
+                <a href="./index.html#contacts" target="_blank" data-i18n="nav.contacts">CONTACTS</a>
+
+
+                <div class="flex items-center justify-between gap-[14px]">
+                    <!--          theme-->
+                    <label for="theme-switch" class="relative inline-flex items-center cursor-pointer group">
+
+                        <input type="checkbox" id="theme-switch" class="sr-only peer" />
+
+
+                        <div class="w-[66px] h-[30px] bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown) rounded-full peer transition-colors duration-500 ease-in-out border border-(--color-cream) shadow-inner">
+
+                            <div class="absolute inset-0 flex items-center justify-between px-2 transition-opacity duration-300 opacity-100 peer-checked:opacity-0">
+                                <svg class="w-5 h-5 text-[#5BB7D9]" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                                <svg class="w-5 h-5 text-[#ffdc85] opacity-100" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg>
+
+
+                            </div>
+
+                            <div class="absolute inset-0 flex items-center justify-between px-2 transition-opacity duration-300 opacity-0 peer-checked:opacity-100">
+                                <svg class="w-5 h-5 text-(--color-cream)" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg>
+                                <svg class="w-5 h-5 text-(--color-secondary)  opacity-50" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                            </div>
+                        </div>
+
+                        <div class="absolute top-[3px] left-[3px] w-[23px] h-[23px] bg-(--color-cream) rounded-full shadow-xl transition-transform duration-500 ease-in-out peer-checked:translate-x-[32px] peer-checked:bg-(--color-cream) border border-[#6b3e23]">
+                            <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-100 peer-checked:opacity-0">
+                                <div class="w-1.5 h-1.5 bg-(--color-secondary)  rounded-full"></div>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-0 peer-checked:opacity-100">
+                                <div class="w-1.5 h-1.5 bg-[#a3b59d] rounded-full"></div>
+                            </div>
+                        </div>
+                    </label>
+
+
+                    <div class="relative inline-block" id="lang-dropdown">
+                        <button
+                                type="button"
+                                id="lang-toggle"
+                                aria-haspopup="listbox"
+                                aria-expanded="false"
+                                class="inline-flex items-center gap-1.5 font-semibold text-[20px] text-(--color-cream) hover:opacity-85 transition-opacity cursor-pointer"
+                        >
+                            <span>LAN</span>
+                            <span class="text-xs transition-transform duration-200" id="lang-arrow">▾</span>
+                        </button>
+
+                        <ul
+                                id="lang-menu"
+                                role="listbox"
+                                aria-label="Language selector"
+                                class="
+      invisible opacity-0 translate-y-1 pointer-events-none
+      group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+      absolute right-0 mt-2 min-w-[84px] rounded-lg py-1.5
+      bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown) backdrop-blur-md border border-(--color-cream)/15 shadow-xl
+      transition-all duration-150 z-50
+    "
+                        >
+                            <li>
+                                <button
+                                        type="button"
+                                        data-lang="uk"
+                                        class="lang-option w-full px-3.5 py-1.5 text-left text-sm font-semibold text-(--color-cream) hover:bg-(--color-cream)/10 transition-colors cursor-pointer"
+                                >
+                                    UA
+                                </button>
+                            </li>
+                            <li>
+                                <button
+                                        type="button"
+                                        data-lang="en"
+                                        class="lang-option w-full px-3.5 py-1.5 text-left text-sm font-semibold text-(--color-cream) hover:bg-(--color-cream)/10 transition-colors cursor-pointer"
+                                >
+                                    EN
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </nav>
+    </div>
+</header>
+
+<section class="container absolute top-[100px] left-[60px] flex flex-col gap-[20px] items-start">
+    <div>
+        <a  href="./index.html"  target="_blank" id="buttonReturnToPortfolio" class=" bg-(--color-secondary) dark:bg-(--color-secondary-lightBrown2) rounded-[15px] cursor-pointer  flex  justify-center items-center gap-[10px] px-[8px] py-[2px]">
+            <img alt="" class="w-[20px] h-auto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAohJREFUeJztms9r02AYx79PktWLelG3oXRFWLdC6mRQDyoMBME/wT9AUPDovzIUBHeXXYc3tTvpcL3IFp04ukNBpId52Kk2yeNB0pW5/GjypLNv3s8taciT74fQ90ceQKPRaDQajUZTTCivG7darakrF6ZWyDetnnVus1qt9vKqlYVcBBw4zqxp+RsAGn/PsEOuuVK27cM86mXBkL7hgePMWpbfxCA8AJDNpv9MupYEogKC8AzUTv7GhIpkLSnEBESFBwACvZGqJYmIgLjwYLycW6y/lqglTWYB7fbOjGl5b0PDA2vlxfrTrHXyItMo0G7vzFh9fgeQHXLJWnmh/piI/Cx18iS1ABXCAykFqBIeSCFApfDAiAJUCw+MMArEhWfg1aSFBxK+AUnCzy3Un0xaeCCBAJXDAzECVA8PRAgoQnggREBRwgOnCChSeOCEgNhVHdAj4g3A4DE8myjM7BGwB9dYHd6ZGgjgZtPqXL38AcCtM3nCscFO9+j3cqPR6ANDE6HOtUt3oHx4ACB7+mLpdnB0PBNknrjXOjVDWQcCyj8OPwLYPpMHGieE3e5Rf+v4cAj1/wT5q9/DamVp6Vdw/p9hcH//83TJo/cqrfiiOHUiVCQJoVPhokiIXAwVQULsclh1CYk2RFSWkHhPUFUJI22Kqihh5G1x1SSk+jCikoTUn8ZUkZDp46gKEjL3CE26hMz9AfPzN7uea94nYC/kkkedb7svstbJC7EusbilNDMeVmo31qXqSSHWI3Tdtn+6rnEv7E0gAw+kakki2iUWKYHxRbKWFOJ9goEEAJ+Ccww0vdL559K1JMitVZZ53ex8r931PXIrtfrW/zoKaDQajUaj0WiKyh+2T2KAGNut0wAAAABJRU5ErkJggg==">
+            <p data-i18n="portfolio.button_return" class="openFilter text-[12px] text-(--color-text-soft) hover:text-(--color-text-light)">Return to Main Page</p>
+        </a>
+    </div>
+
+    <div>
+        <a id="buttonOpenFilter" class=" bg-(--color-secondary) dark:bg-(--color-secondary-lightBrown2) rounded-[15px] cursor-pointer  flex  justify-center items-center gap-[10px] px-[8px] py-[2px]">
+            <img alt="" class="w-[20px] h-auto rotate-y-[180deg]" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAohJREFUeJztms9r02AYx79PktWLelG3oXRFWLdC6mRQDyoMBME/wT9AUPDovzIUBHeXXYc3tTvpcL3IFp04ukNBpId52Kk2yeNB0pW5/GjypLNv3s8taciT74fQ90ceQKPRaDQajUZTTCivG7darakrF6ZWyDetnnVus1qt9vKqlYVcBBw4zqxp+RsAGn/PsEOuuVK27cM86mXBkL7hgePMWpbfxCA8AJDNpv9MupYEogKC8AzUTv7GhIpkLSnEBESFBwACvZGqJYmIgLjwYLycW6y/lqglTWYB7fbOjGl5b0PDA2vlxfrTrHXyItMo0G7vzFh9fgeQHXLJWnmh/piI/Cx18iS1ABXCAykFqBIeSCFApfDAiAJUCw+MMArEhWfg1aSFBxK+AUnCzy3Un0xaeCCBAJXDAzECVA8PRAgoQnggREBRwgOnCChSeOCEgNhVHdAj4g3A4DE8myjM7BGwB9dYHd6ZGgjgZtPqXL38AcCtM3nCscFO9+j3cqPR6ANDE6HOtUt3oHx4ACB7+mLpdnB0PBNknrjXOjVDWQcCyj8OPwLYPpMHGieE3e5Rf+v4cAj1/wT5q9/DamVp6Vdw/p9hcH//83TJo/cqrfiiOHUiVCQJoVPhokiIXAwVQULsclh1CYk2RFSWkHhPUFUJI22Kqihh5G1x1SSk+jCikoTUn8ZUkZDp46gKEjL3CE26hMz9AfPzN7uea94nYC/kkkedb7svstbJC7EusbilNDMeVmo31qXqSSHWI3Tdtn+6rnEv7E0gAw+kakki2iUWKYHxRbKWFOJ9goEEAJ+Ccww0vdL559K1JMitVZZ53ex8r931PXIrtfrW/zoKaDQajUaj0WiKyh+2T2KAGNut0wAAAABJRU5ErkJggg==">
+            <p data-i18n="portfolio.button_open_filter" class="openFilter text-[12px] text-(--color-text-soft) hover:text-(--color-text-light)">Open Filter</p>
+        </a>
+    </div>
+</section>
+
+<!--SectionFilter-->
+<section>
+    <div id="backgroundForFilter" class="backgroundForFilter flex items-center justify-center fixed inset-0 bg-black/50 backdrop-blur-[5px] z-40 transition-opacity duration-300 ">
+        <div id="filterContainer" class="filterContainer fixed w-[300px]  z-[50] bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown) top-[100px] left-[40px] pt-[20px] pb-[50px] transition-transform duration-300">
+
+                <a id="buttonCloseFilter" class="absolute top-[13px] left-[13px] bg-(--color-secondary) dark:bg-(--color-secondary-lightBrown2) rounded-[15px] cursor-pointer flex justify-center items-center gap-[10px] px-[8px] py-[2px]">
+                    <img alt="" class="w-[15px] h-auto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAohJREFUeJztms9r02AYx79PktWLelG3oXRFWLdC6mRQDyoMBME/wT9AUPDovzIUBHeXXYc3tTvpcL3IFp04ukNBpId52Kk2yeNB0pW5/GjypLNv3s8taciT74fQ90ceQKPRaDQajUZTTCivG7darakrF6ZWyDetnnVus1qt9vKqlYVcBBw4zqxp+RsAGn/PsEOuuVK27cM86mXBkL7hgePMWpbfxCA8AJDNpv9MupYEogKC8AzUTv7GhIpkLSnEBESFBwACvZGqJYmIgLjwYLycW6y/lqglTWYB7fbOjGl5b0PDA2vlxfrTrHXyItMo0G7vzFh9fgeQHXLJWnmh/piI/Cx18iS1ABXCAykFqBIeSCFApfDAiAJUCw+MMArEhWfg1aSFBxK+AUnCzy3Un0xaeCCBAJXDAzECVA8PRAgoQnggREBRwgOnCChSeOCEgNhVHdAj4g3A4DE8myjM7BGwB9dYHd6ZGgjgZtPqXL38AcCtM3nCscFO9+j3cqPR6ANDE6HOtUt3oHx4ACB7+mLpdnB0PBNknrjXOjVDWQcCyj8OPwLYPpMHGieE3e5Rf+v4cAj1/wT5q9/DamVp6Vdw/p9hcH//83TJo/cqrfiiOHUiVCQJoVPhokiIXAwVQULsclh1CYk2RFSWkHhPUFUJI22Kqihh5G1x1SSk+jCikoTUn8ZUkZDp46gKEjL3CE26hMz9AfPzN7uea94nYC/kkkedb7svstbJC7EusbilNDMeVmo31qXqSSHWI3Tdtn+6rnEv7E0gAw+kakki2iUWKYHxRbKWFOJ9goEEAJ+Ccww0vdL559K1JMitVZZ53ex8r931PXIrtfrW/zoKaDQajUaj0WiKyh+2T2KAGNut0wAAAABJRU5ErkJggg==">
+                    <p data-i18n="filter.button_close_filter" class="openFilter text-[12px] text-(--color-text-soft)  hover:text-(--color-text-light)">Close</p>
+                </a>
+
+            <p data-i18n="filter.title" class="uppercase font-medium text-center text-[20px] text-(--color-cream) leading-none px-[20px] py-[30px] mb-[14px]">Filters</p>
+            <div class="flex flex-col items-center justify-center gap-[25px] mb-[50px]">
+                <div class="relative w-full h-[2px] bg-(--color-line)  dark:bg-(--color-secondary-lightBrown2) dark:bg-(--color-secondary-lightBrown) ">
+                    <div class="bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown) p-[8px] absolute top-[-24px] left-[30px]">
+                        <span data-i18n="filter.subtitle1" class="font-medium uppercase text-[16px] text-(--color-text-soft)">Sort</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center gap-[22px] w-full px-[30px]">
+                    <div class="bg-(--color-btn-primary) dark:bg-(--color-secondary-lightBrown2) px-[12px] py-[5px]">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="sort" value="newest" checked class="accent-[var(--color-cream)]">
+                            <span data-i18n="filter.button_new" class="uppercase text-[14px] text-(--color-text-light)">Newest</span>
+                        </label>
+                    </div>
+
+                    <div class="bg-(--color-btn-primary) dark:bg-(--color-secondary-lightBrown2) px-[12px] py-[5px]">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="sort" value="oldest"  class="accent-[var(--color-cream)]">
+                            <span data-i18n="filter.button_old" class="uppercase text-[14px] text-(--color-text-light)">Oldest</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center justify-center gap-[25px]">
+                <div class="relative w-full h-[2px] bg-(--color-line) dark:bg-(--color-secondary-lightBrown2) dark:bg-(--color-secondary-lightBrown) ">
+                    <div class="bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown) p-[8px] absolute top-[-24px] left-[30px]">
+                        <span data-i18n="filter.subtitle2" class="font-medium uppercase text-[16px] text-(--color-text-soft)">Technologies</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center px-[30px] gap-[22px]">
+
+                    <div class="bg-(--color-secondary-lightBrown) dark:bg-(--color-secondary-lightBrown2) px-[12px] py-[5px]">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" name="tech" value="all" checked class="accent-[var(--color-cream)]">
+                            <span data-i18n="filter.button_all" class="uppercase text-[14px] text-(--color-text-light)">All</span>
+                        </label>
+                    </div>
+
+                    <div class="bg-(--color-btn-primary) dark:bg-(--color-secondary-lightBrown2) px-[12px] py-[5px]">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" name="tech" value="tailwind" checked class="accent-[var(--color-cream)]">
+                            <span class="uppercase text-[14px] text-(--color-text-light)">Tailwind</span>
+                        </label>
+                    </div>
+
+                    <div class="bg-(--color-btn-primary) dark:bg-(--color-secondary-lightBrown2) px-[12px] py-[5px]">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" name="tech" value="sass" checked class="accent-[var(--color-cream)]">
+                            <span class="uppercase text-[14px] text-(--color-text-light)">Sass</span>
+                        </label>
+                    </div>
+
+                    <div class="bg-(--color-btn-primary) dark:bg-(--color-secondary-lightBrown2) px-[12px] py-[5px]">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" name="tech" value="vite" checked class="accent-[var(--color-cream)]">
+                            <span class="uppercase text-[14px] text-(--color-text-light)">Vite</span>
+                        </label>
+                    </div>
+
+                    <div class="bg-(--color-btn-primary) dark:bg-(--color-secondary-lightBrown2) px-[12px] py-[5px]">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" name="tech" value="gulp" checked class="accent-[var(--color-cream)]">
+                            <span class="uppercase text-[14px] text-(--color-text-light)">Gulp</span>
+                        </label>
+                    </div>
+
+                    <div class="bg-(--color-btn-primary) dark:bg-(--color-secondary-lightBrown2) px-[12px] py-[5px]">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" name="tech" value="javaScript" checked class="accent-[var(--color-cream)]">
+                            <span class="uppercase text-[14px] text-(--color-text-light)">JavaScript</span>
+                        </label>
+                    </div>
+
+                    <div class="bg-(--color-btn-primary) dark:bg-(--color-secondary-lightBrown2) px-[12px] py-[5px]">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="checkbox" name="tech" value="react" checked class="accent-[var(--color-cream)]">
+                            <span class="uppercase text-[14px] text-(--color-text-light)">React</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-[32px] flex justify-center px-[20px]">
+                <button
+                        id="applyFiltersBtn"
+                        type="button"
+                        data-i18n="filter.apply_changes"
+                        class="px-[22px] py-[9px] rounded-[20px] bg-(--color-cream) hover:bg-(--color-btn-secondary) text-(--color-secondary) text-[13px] font-medium uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm active:scale-[0.98]"
+                >
+                    Add Changes
+                </button>
+            </div>
+          </div>
+    </div>
+</section>
+
+<section class="mt-[90px] flex flex-col items-center justify-center gap-[30px]">
+    <div  class=" flex justify-center items-center"><h2 data-i18n="portfolio.title" class="relative subtitle subtitle-line uppercase font-medium text-[35px] text-(--color-cream)  leading-none">My Works</h2></div>
+    <p data-i18n="portfolio.subtitle" class=" max-w-[600px] w-[100%] text-center text-(--color-cream) text-[19px]">I hope you enjoy exploring my work! Take a look around :)</p>
+</section>
+
+
+<!--section portfolio-->
+<section class="container mt-[60px] mb-[60px]">
+    <div>
+        <div id="projects-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-[46px]"></div>
+    </div>
+
+    <div id="lightbox-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-(--color-secondary) dark:bg-(--color-secondary-lightBrown) border border-(--color-cream) rounded-2xl max-w-3xl w-full p-6 relative shadow-2xl text-(--color-cream)">
+            <button type="button" class="close absolute top-[15px] right-[15px] bg-transparent border-none font-bold text-[18px] text-(--color-text-soft) hover:text-(--color-cream) cursor-pointer" id="close-lightbox">✕</button>
+
+            <div class="flex flex-col md:flex-row gap-6">
+                <img id="modal-img" src="" alt="Project Preview" class="w-full md:w-1/2 h-64 object-cover rounded-[20px] border border-(--color-cream)">
+
+                <div class="flex flex-col justify-between flex-1">
+                    <div>
+                        <h3  id="modal-title" class="text-2xl font-bold mb-2"></h3>
+                        <p  id="modal-desc" class="text-(--color-cream) text-[16px] mb-4"></p>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <a id="modal-github" href="" target="_blank" class="px-4 py-2 bg-(--color-btn-secondary ) bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown) hover:dark:bg-(--color-secondary-lightBrown2) hover:bg-(--color-main) rounded-[20px] text-[16px] font-medium transition-colors border border-(--color-cream)">GitHub</a>
+                        <a id="modal-live" href="" target="_blank" class="px-4 py-2 bg-(--color-cream) hover:bg-(--color-btn-secondary) text-(--color-secondary) rounded-[20px] text-[16px] font-medium transition-colors">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!--  footer  -->
+<footer class="flex items-center bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown2) h-[100px] p-[12px]">
+    <div class="container">
+
+        <div class="flex flex-col gap-[15px]">
+            <div class="flex items-center justify-between">
+                <a class="header-logo" href=""><img alt="Main page - Anna Zakharova" class="w-[40px] h-auto" src="/My-Portfolio/assets/logo-DWtN4wd1.png"></a>
+
+                <div class="flex items-center  gap-[12px]">
+                    <a href="https://github.com/Annet2804" target="_blank" rel="noopener noreferrer" class="w-[30px] h-[30px] bg-(--color-cream) rounded-[50%]"><img class="w-[30px] h-[30px] animation-scale" alt="" src="/My-Portfolio/assets/github-BB3bc4Zr.png"></a>
+                    <a href="https://t.me/ann_1_2804" target="_blank" rel="noopener noreferrer" class="w-[30px] h-[30px] bg-(--color-cream) rounded-[50%]"><img class="w-[33px] h-[33px] animation-scale bg-cover" alt="" src="/My-Portfolio/assets/Telegram-DdoFzWvo.png"></a>
+                    <a href="https://www.instagram.com/annet_2804?knvt=MTFlNXQxd3p5OTRmNA==" target="_blank" rel="noopener noreferrer" class="w-[30px] h-[30px] bg-(--color-cream) rounded-[50%]"><img class="w-[30px] h-[30px] animation-scale" alt="" src="/My-Portfolio/assets/instagram-BT1rpC5A.png"></a>
+
+                    <a href="https://mail.google.com/mail/?view=cm&to=anna.zakharova.dev@gmail.com" target="_blank" rel="noopener noreferrer" class="w-[30px] h-[30px] bg-(--color-cream) rounded-[50%]"><img class="w-[30px] h-[30px] animation-scale" alt="" src="/My-Portfolio/assets/email-Bc6vyUwi.png"></a>
+                    <a href="viber://chat?number=%2B380957215737" target="_blank" rel="noopener noreferrer" class="w-[30px] h-[30px] bg-(--color-cream) rounded-[50%]"><img class="w-[30px] h-[30px] animation-scale" alt="" src="/My-Portfolio/assets/viber-B6Ta1RRM.png"></a>
+                </div></div>
+
+            <div><p data-i18n="footer.rights" class="text-[10px] text-(--color-cream) text-middle text-end">© 2026 Anna Zakharova. All rights reserved</p></div>
+        </div>
+
+    </div>
+</footer>
+
+
+<!-- modal Window  -->
+<div class="modalWindow fixed inset-0 z-50 items-center justify-center bg-black/60 backdrop-blur-xs" id="modalWindow" style="display: none;">
+    <form class="form relative flex flex-col justify-center items-start p-[24px] bg-(--color-block-main) dark:bg-(--color-secondary-dark-light) text-(--color-cream) rounded-[18px] max-w-[400px] w-full mx-[20px] shadow-2xl" id="form">
+
+        <h3 data-i18n="modal.title" class=" text-[18px] font-bold uppercase mb-[15px]">Get in Touch</h3>
+        <p data-i18n="modal.subtitle" class=" text-[14px] text-(--color-text-soft) mb-[20px]">Leave a message, and I'll get in touch with you!</p>
+
+        <input
+                type="text"
+                id="name"
+                data-i18n-placeholder="modal.name_placeholder"
+                placeholder="Your Name"
+                required
+                class="w-full mb-[14px] px-[16px] py-[12px] bg-white/5 hover:bg-white/10 focus:bg-white/10 border border-white/10 focus:border-(--color-cream)/50 rounded-[12px] text-[14px] text-white placeholder:text-white/40 outline-none transition-all duration-200"
+        >
+
+        <!-- Email -->
+        <input
+                type="email"
+                id="email"
+                data-i18n-placeholder="modal.email_placeholder"
+                placeholder="Your Email"
+                required
+                class="w-full mb-[14px] px-[16px] py-[12px] bg-white/5 hover:bg-white/10 focus:bg-white/10 border border-white/10 focus:border-(--color-cream)/50 rounded-[12px] text-[14px] text-white placeholder:text-white/40 outline-none transition-all duration-200"
+        >
+
+        <textarea
+                id="message"
+                rows="4"
+                data-i18n-placeholder="modal.message_placeholder"
+                placeholder="Write your message here..."
+                required
+                class="w-full mb-[24px] px-[16px] py-[12px] bg-white/5 hover:bg-white/10 focus:bg-white/10 border border-white/10 focus:border-(--color-cream)/50 rounded-[12px] text-[14px] text-white placeholder:text-white/40 outline-none resize-none transition-all duration-200"
+        ></textarea>
+
+        <button type="button" class="close absolute top-[15px] right-[15px] bg-transparent border-none font-bold text-[18px] text-(--color-text-soft) hover:text-white cursor-pointer" id="close">✕</button>
+
+        <button data-i18n="modal.submit_btn" type="submit" class="btn-secondary ">Submit</button>
+    </form>
+</div>
+
+
+<!-- buttons  -->
+<div class="fixed right-[20px] bottom-[20px] flex flex-col gap-[10px] z-10">
+
+    <button id="openModalBtn" class="buttonModal w-[45px] h-[45px] rounded-[50%] bg-(--color-secondary) dark:bg-(--color-secondary-dark-light)  text-(--color-cream) flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 cursor-pointer" title="Contact Me">
+        <svg class="w-[20px] h-[20px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+    </button>
+
+    <button id="scrollToTopBtn" class="w-[45px] h-[45px] rounded-[50%] bg-(--color-secondary) dark:bg-(--color-secondary-dark-light)  text-(--color-cream) flex items-center justify-center shadow-lg opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 cursor-pointer" title="Scroll to top">
+        <svg class="w-[20px] h-[20px]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </button>
+</div>
+
+
+<div id="app"></div>
+</body>
+</html>
+
