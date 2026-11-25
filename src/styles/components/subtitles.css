@@ -1,0 +1,35 @@
+.subtitle-line::after {
+    position: absolute;
+    content: "";
+    background-color: #F0D4C0;
+    height: 3px;
+    bottom: -7px;
+    left: 0;
+    width: 100%;
+}
+
+
+.subtitle {
+    transition: all 0.3s ease;
+}
+
+.subtitle:hover {
+    color: #F0D4C0;
+    text-shadow: 0 0 10px rgba(240, 212, 192, 0.6), 0 0 20px rgba(240, 212, 192, 0.4);
+}
+
+.dark .subtitle {
+    text-shadow: 0 0 5px rgba(240, 212, 192, 0.6), 0 0 20px rgba(240, 212, 192, 0.4);
+}
+
+.dark .subtitle:hover {
+    text-shadow: 0 0 20px rgba(240, 212, 192, 0.6), 0 0 20px rgba(240, 212, 192, 0.4);
+    transform: scale(1.01);
+}
+
+
+
+
+
+
+

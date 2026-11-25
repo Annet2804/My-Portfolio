@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Сучасне портфоліо frontend-розробника. JavaScript, Tailwind CSS, Vite, адаптивна верстка" />
+    <meta name="keywords" content="frontend, javascript, tailwind, web developer, portfolio" />
+    <meta name="author" content="Frontend Developer" />
+
+    <title>My Portfolio</title>
+  </head>
+  <body>
+
+
+<div>
+<!--  header -->
+  <header class="sticky top-0 left-0 z-20 bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown) h-[60px] flex items-center">
+    <div class="container w-full">
+      <nav class="flex items-center justify-between">
+        <a class="header-logo"  href="./index.html"  ><div class="w-[38px] h-auto"><img alt="Main page - Anna Zakharova" class="w-[38px] h-auto cover" src="src/assets/photos/section1/logo.png"></div></a>
+        <div class="header-nav flex items-center gap-[60px] tracking-[1.2px]">
+          <a href="#about" data-i18n="nav.about">ABOUT ME</a>
+          <a href="#skills" data-i18n="nav.skills">SKILLS</a>
+          <a href="/portfolio.html" target="_blank" data-i18n="nav.portfolio">PORTFOLIO</a>
+          <a href="#contacts" data-i18n="nav.contacts">CONTACTS</a>
+
+
+          <div class="flex items-center justify-between gap-[14px]">
+            <!--          theme-->
+            <label for="theme-switch" class="relative inline-flex items-center cursor-pointer group">
+
+              <input type="checkbox" id="theme-switch" class="sr-only peer" />
+
+
+              <div class="w-[66px] h-[30px] bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown) rounded-full peer transition-colors duration-500 ease-in-out border border-(--color-cream) shadow-inner">
+
+                <div class="absolute inset-0 flex items-center justify-between px-2 transition-opacity duration-300 opacity-100 peer-checked:opacity-0">
+                  <svg class="w-5 h-5 text-[#5BB7D9]" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                  <svg class="w-5 h-5 text-[#ffdc85] opacity-100" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg>
+
+
+                </div>
+
+                <div class="absolute inset-0 flex items-center justify-between px-2 transition-opacity duration-300 opacity-0 peer-checked:opacity-100">
+                  <svg class="w-5 h-5 text-(--color-cream)" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path></svg>
+                  <svg class="w-5 h-5 text-(--color-secondary)  opacity-50" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                </div>
+              </div>
+
+              <div class="absolute top-[3px] left-[3px] w-[23px] h-[23px] bg-(--color-cream) rounded-full shadow-xl transition-transform duration-500 ease-in-out peer-checked:translate-x-[32px] peer-checked:bg-(--color-cream) border border-[#6b3e23]">
+                <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-100 peer-checked:opacity-0">
+                  <div class="w-1.5 h-1.5 bg-(--color-secondary)  rounded-full"></div>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-500 opacity-0 peer-checked:opacity-100">
+                  <div class="w-1.5 h-1.5 bg-[#a3b59d] rounded-full"></div>
+                </div>
+              </div>
+            </label>
+
+<!--            <button id="lang-toggle" class=" font-semibold text-[20px] text-(&#45;&#45;color-cream) hover:opacity-85 transition-opacity cursor-pointer">-->
+<!--              UA-->
+<!--            </button>-->
+
+            <div class="relative inline-block" id="lang-dropdown">
+              <button
+                      type="button"
+                      id="lang-toggle"
+                      aria-haspopup="listbox"
+                      aria-expanded="false"
+                      class="inline-flex items-center gap-1.5 font-semibold text-[20px] text-(--color-cream) hover:opacity-85 transition-opacity cursor-pointer"
+              >
+                <span>LAN</span>
+                <span class="text-xs transition-transform duration-200" id="lang-arrow">▾</span>
+              </button>
+
+              <ul
+                      id="lang-menu"
+                      role="listbox"
+                      aria-label="Language selector"
+                      class="
+      invisible opacity-0 translate-y-1 pointer-events-none
+      group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+      absolute right-0 mt-2 min-w-[84px] rounded-lg py-1.5
+      bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown) backdrop-blur-md border border-(--color-cream)/15 shadow-xl
+      transition-all duration-150 z-50
+    "
+              >
+                <li>
+                  <button
+                          type="button"
+                          data-lang="uk"
+                          class="lang-option w-full px-3.5 py-1.5 text-left text-sm font-semibold text-(--color-cream) hover:bg-(--color-cream)/10 transition-colors cursor-pointer"
+                  >
+                    UA
+                  </button>
+                </li>
+                <li>
+                  <button
+                          type="button"
+                          data-lang="en"
+                          class="lang-option w-full px-3.5 py-1.5 text-left text-sm font-semibold text-(--color-cream) hover:bg-(--color-cream)/10 transition-colors cursor-pointer"
+                  >
+                    EN
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+<!--  section hero -->
+<section>
+  <div class="hero-section ">
+    <div class="container w-full">
+      <div class="flex flex-col gap-[40px] justify-start items-start">
+        <h1  class="text-[56px] text-(--color-secondary) dark:text-(--color-secondary-lightBrown) font-bold mt-[80px] tracking-[1.2px]">FRONTEND DEVELOPER</h1>
+        <p data-i18n="hero.description" class="typing-text max-w-[608px] text-[24px] text-(--color-secondary) dark:text-(--color-secondary-lightBrown) font-[500] italic min-h-[150px]  flex-shrink-0">Hi, I’m Anna Zakharova — a Frontend Developer who builds modern, user-friendly,
+          and functional web applications. I combine technical skills with a creative
+          approach to bring ideas to life</p>
+        <a href="/portfolio.html" target="_blank" data-i18n="hero.button" class="btn-primary mt-[5px]">MY PORTFOLIO</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--block aside + main-->
+<section class="mt-[60px] mb-[60px]">
+
+  <div class="container w-full flex justify-between">
+
+    <!--  section aside-->
+    <aside class="max-w-[450px] w-full bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown2) py-[40px]">
+
+      <div class="flex flex-col gap-[35px]">
+
+        <div class="flex flex-col  items-center justify-center gap-[8px]">
+          <div class="flex flex-col  items-center justify-center gap-[8px] px-[30px]">
+              <h3 data-i18n="sidebar.name" class="subtitle  uppercase font-medium text-[28px] text-(--color-cream)  leading-none">Anna Zakharova</h3>
+              <p data-i18n="sidebar.role" class="uppercase font-medium text-[20px] text-(--color-text-light)  leading-none">FRONTEND DEVELOPER</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col  items-start justify-start gap-[20px]">
+          <div class="w-full h-[2px] bg-(--color-line) dark:bg-(--color-secondary-lightBrown)"></div>
+
+          <div class="flex flex-col  items-start justify-start gap-[14px] px-[30px]">
+            <div class="flex items-end justify-start gap-[8px]">
+              <div class="w-[25px] h-[25px] "><img class="w-[25px] h-[25px] animate-bounce" src="src/assets/photos/section2/general_info/location.png" alt="location Sumy"></div>
+              <span data-i18n="sidebar.location" class=" font-medium text-[16px] text-(--color-text-light) dark:text-(--color-cream)">Sumy, Ukraine</span>
+            </div>
+
+            <div class="flex items-end justify-start gap-[8px]">
+              <div class="w-[25px] h-[25px]"><img src="src/assets/photos/section2/general_info/birthday.png" alt="birthday"></div>
+              <span data-i18n="sidebar.age" class="font-medium text-[16px] text-(--color-text-light) dark:text-(--color-cream)">23 y.o.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center justify-center gap-[25px]">
+
+          <div class="relative w-full h-[2px] bg-(--color-line) dark:bg-(--color-secondary-lightBrown) ">
+            <div class="bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown2) p-[8px] absolute top-[-24px] left-[30px]">
+              <span data-i18n="sidebar.languages_title" class="font-medium uppercase text-[16px] text-(--color-text-soft)">Languages</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center gap-[80px] px-[30px]">
+
+            <div class="flex flex-col gap-[10px] items-center ">
+              <div class="gradient-circle relative w-[75px] h-[75px] rounded-[50%]  ">
+                <div class="circle-language flex items-center justify-center absolute inset-[6px] rounded-[50%] bg-white dark:bg-(--color-secondary-dark-light)">
+                  <span data-i18n="sidebar.native" class="font-bold text-[14px] text-(--color-main) dark:text-(--color-cream)">native</span>
+                </div>
+              </div>
+
+              <div>
+                <span data-i18n="sidebar.lang_ua" class="font-medium text-[16px] text-(--color-text-light) dark:text-(--color-cream)">Ukraine</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-[10px] items-center justify-center">
+              <div class="gradient-circle relative w-[75px] h-[75px] rounded-[50%]  ">
+                <div class="flex items-center justify-center absolute inset-[6px] rounded-[50%] bg-white dark:bg-(--color-secondary-dark-light)">
+                  <span class="font-bold text-[20px] text-(--color-main) dark:text-(--color-cream) ">B2</span>
+                </div>
+              </div>
+
+              <div>
+                <span data-i18n="sidebar.lang_en" class="font-medium text-[16px] text-(--color-text-light) dark:text-(--color-cream)">English</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="flex flex-col gap-[25px]">
+
+          <div class="relative w-full h-[2px] bg-(--color-line) dark:bg-(--color-secondary-lightBrown) ">
+            <div class="bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown2) p-[8px] absolute top-[-24px] left-[30px]">
+              <span data-i18n="sidebar.skills_title" class="font-medium uppercase text-[16px] text-(--color-text-soft) ">Skills</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-[20px] px-[30px]">
+
+            <div class="flex flex-col gap-[3px]">
+              <div class="flex justify-between items-center">
+                <span  class="text-[14px] font-medium  text-(--color-text-light) dark:text-(--color-cream)">HTML/SCC/SAAS/Tailwind</span>
+                <span  class="text-[14px] font-medium  text-(--color-text-light) dark:text-(--color-cream)">90%</span>
+              </div>
+              <div class="progress-container max-w-[410px] w-full h-[9px] rounded-[5px] bg-(--color-line) dark:bg-(--color-secondary-lightBrown)">
+                <div class="progress-fill relative overflow-hidden max-w-[369px] w-full h-[9px] rounded-[5px] bg-red-600 dark:bg-(--color-secondary-dark-beige)">
+                  <div class="progress-shine absolute top-0 bottom-0 w-[60px] bg-gradient-to-r from-transparent via-white/60 to-transparent -translate-x-full"></div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-[3px]">
+              <div class="flex justify-between items-center">
+                <span class="text-[14px] font-medium  text-(--color-text-light) dark:text-(--color-cream)">JavaScript/TypeScript</span>
+                <span class="text-[14px] font-medium  text-(--color-text-light) dark:text-(--color-cream)">80%</span>
+              </div>
+              <div class="progress-container max-w-[410px] w-full h-[9px] rounded-[5px] bg-(--color-line) dark:bg-(--color-secondary-lightBrown)">
+                <div class="progress-fill relative overflow-hidden  max-w-[328px] w-full h-[9px] rounded-[5px] bg-yellow-400 dark:bg-(--color-secondary-dark-beige)">
+                  <div class="progress-shine absolute top-0 bottom-0 w-[60px] bg-gradient-to-r from-transparent via-white/60 to-transparent -translate-x-full"></div>
+                </div>
+
+
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-[3px]">
+              <div class="flex justify-between items-center">
+                <span class="text-[14px] font-medium  text-(--color-text-light) dark:text-(--color-cream)">React</span>
+                <span class="text-[14px] font-medium  text-(--color-text-light) dark:text-(--color-cream)">80%</span>
+              </div>
+              <div class="progress-container max-w-[410px] w-full h-[9px] rounded-[5px] bg-(--color-line) dark:bg-(--color-secondary-lightBrown)">
+                <div class="progress-fill relative overflow-hidden max-w-[328px] w-full h-[9px] rounded-[5px] bg-green-400 dark:bg-(--color-secondary-dark-beige)">
+                  <div class="progress-shine absolute top-0 bottom-0 w-[60px] bg-gradient-to-r from-transparent via-white/60 to-transparent -translate-x-full"></div>
+                </div>
+
+
+              </div>
+            </div>
+
+            <div class ="flex justify-between items-center gap-[5px]">
+              <div class="animation-move flex items-center justify-center w-[50px] h-[50px] "><img class="w-[50px] h-[50px] " alt="Figma" src="src/assets/photos/section2/skills/figma.png"></div>
+              <div class="animation-move flex items-center justify-center w-[50px] h-[50px] "><img class="w-[50px] h-[50px] " alt="Vite" src="src/assets/photos/section2/skills/vite.svg"></div>
+              <div class="animation-move flex items-center justify-center w-[50px] h-[50px] "><img class="w-[50px] h-[50px] " alt="Gulp" src="src/assets/photos/section2/skills/gulp.svg"></div>
+              <div class="animation-move flex items-center justify-center w-[50px] h-[50px] "><img class="w-[50px] h-[50px] " alt="Photoshop" src="src/assets/photos/section2/skills/photoshop.png"></div>
+              <div class="animation-move flex items-center justify-center w-[50px] h-[50px] "><img class="w-[50px] h-[50px] " alt="Illustrator" src="src/assets/photos/section2/skills/illustrator.png"></div>
+              <div class="animation-move flex items-center justify-center w-[50px] h-[50px] "><img class="w-[50px] h-[50px] " alt="Git" src="src/assets/photos/section2/skills/git.png"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-[25px]">
+
+          <div class="relative  w-full h-[2px] bg-(--color-line) dark:bg-(--color-secondary-lightBrown) ">
+            <div class="bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown2)  p-[8px] absolute top-[-24px] left-[30px]">
+              <span data-i18n="sidebar.education_title" class="font-medium uppercase text-[16px] text-(--color-text-soft)">EDUCATION & COURSES</span>
+            </div>
+          </div>
+
+            <div class="flex flex-col gap-[14px] px-[30px]">
+
+              <div class="flex  gap-[8px]">
+                <img class="w-[20px] h-[20px]" src="src/assets/photos/section2/education/checkmark.png" alt="Check">
+                <p data-i18n="sidebar.edu_1" class="text-[14px] font-medium text-(--color-text-light) dark:text-(--color-cream)">Bachelor in Computer Science (Sumy State University) - 01.09.2020-30.06.2024</p>
+              </div>
+
+              <div class="flex gap-[5px]">
+                <img class="w-[20px] h-[20px]" src="src/assets/photos/section2/education/checkmark.png" alt="Check">
+                <p data-i18n="sidebar.edu_2" class="text-[14px] font-medium text-(--color-text-light) dark:text-(--color-cream)">Master’s Degree in Management (Sumy State University) - 01.09.2024-31.01.2026</p>
+              </div>
+
+              <div class="flex gap-[5px]">
+                <img class="w-[20px] h-[20px]" src="src/assets/photos/section2/education/checkmark.png" alt="Check">
+                <p data-i18n="sidebar.edu_3" class=" text-[14px] font-medium text-(--color-text-light) dark:text-(--color-cream)">IT Step Academy, Front end Certificate - 01.09.2025-25.11.2026</p>
+              </div>
+
+              <div class="flex  gap-[8px]">
+                <img class="w-[20px] h-[20px]" src="src/assets/photos/section2/education/checkmark.png" alt="Check">
+                <p data-i18n="sidebar.edu_4" class="text-[14px] font-medium text-(--color-text-light) dark:text-(--color-cream)">Erasmus+ Academic Mobility Program (Lodz University of Technology, Poland) - 08.03.2026-12.07.2026</p>
+              </div>
+
+              <div class="flex gap-[5px]">
+                <img class="w-[20px] h-[20px]" src="src/assets/photos/section2/education/checkmark.png" alt="Check">
+                <p data-i18n="sidebar.edu_5" class="text-[14px] font-medium text-(--color-text-light) dark:text-(--color-cream)">Sumy Ukrainian-British Linguistic Centre, FCE English Course - 01.09.2025-Current</p>
+              </div>
+
+              <div class="flex gap-[5px]">
+                <img class="w-[20px] h-[20px]" src="src/assets/photos/section2/education/checkmark.png" alt="Check">
+                <p data-i18n="sidebar.edu_6" class=" text-[14px] font-medium text-(--color-text-light) dark:text-(--color-cream)">Master’s in Hotel and Restaurant Business - 01.09.2025-Current</p>
+              </div>
+            </div>
+          </div>
+
+
+        <div class="flex flex-col gap-[25px]">
+          <div class="relative  w-full h-[2px] bg-(--color-line) dark:bg-(--color-secondary-lightBrown) ">
+            <div class="bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown2)  p-[8px] absolute top-[-24px] left-[30px]">
+              <span data-i18n="sidebar.contacts_title" class="font-medium uppercase text-[16px] text-(--color-text-soft)">CONTACTS</span>
+            </div>
+          </div>
+
+          <div class=" flex justify-around gap-x-[70px] gap-y-[20px] items-center flex-wrap px-[30px]">
+            <a href="https://github.com/Annet2804" target="_blank" rel="noopener noreferrer" class="animation-scale flex justify-center items-center w-[60px] h-[60px]  rounded-[50%] "><img alt="github" class="w-[60px] h-[60px]" src="src/assets/photos/section2/contacts/github.png"></a>
+            <a href="https://t.me/ann_1_2804" target="_blank" rel="noopener noreferrer" class="animation-scale flex justify-center items-center w-[60px] h-[60px]  rounded-[50%] "><img alt="Telegram" class="w-[60px] h-[60px]" src="src/assets/photos/section2/contacts/Telegram.png"></a>
+            <a href="https://wa.me/380957215737" target="_blank" rel="noopener noreferrer" class="animation-scale flex justify-center items-center w-[60px] h-[60px]  rounded-[50%] "><img alt="whatsapp" class="w-[60px] h-[60px]" src="src/assets/photos/section2/contacts/whatsapp.png"></a>
+
+            <a href="viber://chat?number=%2B380957215737" target="_blank" class="animation-scale flex justify-center items-center w-[60px] h-[60px]  rounded-[50%] "><img alt="viber" class="w-[60px] h-[60px]" src="src/assets/photos/section2/contacts/viber.png"></a>
+            <a href="https://www.instagram.com/annet_2804?knvt=MTFlNXQxd3p5OTRmNA==" target="_blank" rel="noopener noreferrer" class="animation-scale flex justify-center items-center w-[60px] h-[60px]  rounded-[50%] "><img alt="instagram" class="w-[60px] h-[60px]" src="src/assets/photos/section2/contacts/instagram.png"></a>
+            <a href="https://www.behance.net/14fd6204" target="_blank" rel="noopener noreferrer" class="animation-scale flex justify-center items-center w-[60px] h-[60px]  rounded-[50%] "><img alt="behance" class="w-[60px] h-[60px]" src="src/assets/photos/section2/contacts/behance.png"></a>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-[25px]">
+          <div class="relative  w-full h-[2px] bg-(--color-line) dark:bg-(--color-secondary-lightBrown) ">
+            <div class="bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown2)  p-[8px] absolute top-[-24px] left-[30px]">
+              <span data-i18n="sidebar.hobbies_title" class="font-medium uppercase text-[16px] text-(--color-text-soft)">hobbies</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-[14px] ">
+            <div class="flex justify-start items-center gap-[8px] px-[30px]">
+              <div class="flex justify-center items-center w-[40px] h-[40px]  rounded-[50%]" ><img class="animation-move w-[40px] h-[40px]" src="src/assets/photos/section2/hobbies/design.png" alt="design sites"></div>
+              <span data-i18n="sidebar.hobby_1" class="text-[16px] font-medium text-(--color-text-light) dark:text-(--color-cream)">Designing website interfaces</span>
+            </div>
+
+            <div class="flex justify-start items-center gap-[8px] px-[30px]">
+              <div class="flex justify-center items-center w-[40px] h-[40px]  rounded-[50%]" ><img class="animation-move w-[40px] h-[40px]" src="src/assets/photos/section2/hobbies/sports.png" alt="sports"></div>
+              <span data-i18n="sidebar.hobby_2" class="text-[16px] font-medium text-(--color-text-light) dark:text-(--color-cream)">Engage in sports activities</span>
+            </div>
+
+            <div class="flex justify-start items-center gap-[8px] px-[30px]">
+              <div class="flex justify-center items-center w-[40px] h-[40px]  rounded-[50%]" ><img class="animation-move w-[40px] h-[40px]" src="src/assets/photos/section2/hobbies/reading.png" alt="reading"></div>
+              <span data-i18n="sidebar.hobby_3" class="text-[16px] font-medium text-(--color-text-light) dark:text-(--color-cream)">Reading books</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </aside>
+
+
+<!--    main section-->
+    <div class="flex flex-col max-w-[800px] w-full">
+
+
+<!--      about me-->
+      <div id="about" class="relative flex flex-col gap-[36px] max-w-[800px] w-full bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown2) pt-[40px] pb-[60px] px-[30px] ">
+        <div  class="  flex justify-center items-center"><h2 data-i18n="about.title" class="relative subtitle subtitle-line uppercase font-medium text-[35px] text-(--color-cream)  leading-none">About me</h2></div>
+        <p data-i18n="about.description" class="text-center text-(--color-cream) text-[16px]">Hi! I'm Anna Zakharova, a beginner frontend developer focused on creating beautiful, flexible, and user-friendly websites.
+          With a background in Computer Science and current studies at IT Step Academy,
+          I’m building strong skills in HTML, CSS, Git, and GitHub, while actively learning JavaScript.
+          <br><br>
+          My eye for design and experience with Figma help me craft interfaces that are not only functional but also visually engaging.
+          I’m eager to grow as part of a team, contribute to real-world projects, and continuously improve my development skills</p>
+
+        <a href="/portfolio.html" target="_blank" data-i18n="about.button" class="btn-secondary">MY PORTFOLIO</a>
+
+        <div class="absolute overflow-hidden  px-[40px] py-[20px] bottom-[-36px] rounded-[50px] left-[50%] -translate-x-1/2 max-w-[700px] w-full h-[45px] font-medium text-(--color-text-light) bg-(--color-secondary) dark:bg-(--color-secondary-dark-light) ">
+          <div class="animate-marquee flex justify-between items-center h-full">
+
+            <div class="flex justify-around w-full">
+              <span>CSS</span>
+              <span>HTML</span>
+              <span>GitHub</span>
+              <span>FIGMA</span>
+              <span>JavaScript</span>
+            </div>
+
+            <div class="flex justify-around w-full">
+              <span>Tailwind</span>
+              <span>React</span>
+              <span>TypeScript</span>
+              <span>Vite</span>
+              <span>SAAS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<!--      my skills-->
+      <div id="skills" class="flex justify-between gap-[26px] max-w-[800px] w-full bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown2) mt-[30px] pt-[60px] pb-[60px] px-[50px]">
+
+
+        <div class=" max-w-[357px] flex flex-col items-start justify-start">
+          <div class="swiper mySwiper ">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div data-i18n="skills_section.slide1_title" class="font-medium uppercase text-[16px] text-(--color-text-soft) dark:text-(--color-cream)">FRONTEND DEVELOPMENT</div>
+
+                <div class="flex flex-col gap-[8px] w-full bg-red-950 dark:bg-(--color-secondary-dark-beige) p-[15px] rounded-[16px]">
+                  <p data-i18n="skills_section.slide1_subtitle" class="text-(--color-cream) dark:text-(--color-secondary-darkerBrown) text-[14px]">Core Tech Stack:</p>
+
+                  <div class="bg-(--color-text-soft) p-[7px] text-[12px] rounded-[16px] text-(--color-secondary) font-[600] w-[180px]">HTML/SCC/SAAS/Tailwind</div>
+                  <div class="bg-(--color-text-soft) p-[7px] text-[12px] rounded-[16px] text-(--color-secondary) font-[600] w-[180px] ">JS/TS/React</div>
+                  <div class="bg-(--color-text-soft) p-[7px] text-[12px] rounded-[16px] text-(--color-secondary) font-[600] w-[180px]">Git/GitHub/Vite/Gulp</div>
+                </div>
+
+                <div data-i18n="skills_section.slide1_note" class="text-center text-[12px] text-(--color-cream) bg-red-950 dark:bg-(--color-secondary-dark-beige) dark:text-(--color-secondary-darkerBrown) p-[9px] rounded-[16px] ">IT Step Academy — completed a course with a certificate</div>
+
+
+
+              </div>
+              <div class="swiper-slide">
+
+                <div data-i18n="skills_section.slide2_title" class="font-medium uppercase text-[16px] text-(--color-text-soft) dark:text-(--color-cream)">ENGLISH PROFICIENCY</div>
+
+                <div class="flex flex-col gap-[8px] w-full bg-blue-950 dark:bg-(--color-secondary-dark-beige) p-[15px] rounded-[16px]">
+                  <p data-i18n="skills_section.slide2_subtitle" class="text-(--color-cream) dark:text-(--color-secondary-darkerBrown) text-[14px]">Level & Practice:</p>
+
+                  <div class="bg-(--color-text-soft) p-[7px] text-[12px] rounded-[16px] text-(--color-secondary) font-[600] w-[180px]">B2 Upper-Intermediate</div>
+                  <div class="bg-(--color-text-soft) p-[7px] text-[12px] rounded-[16px] text-(--color-secondary) font-[600] w-[180px]">Technical Documentation</div>
+                  <div class="bg-(--color-text-soft) p-[7px] text-[12px] rounded-[16px] text-(--color-secondary) font-[600] w-[180px]">Fluent Communication</div>
+                </div>
+
+                <div data-i18n="skills_section.slide2_note" class="text-center text-[12px] text-(--color-cream) bg-blue-950 dark:bg-(--color-secondary-dark-beige) dark:text-(--color-secondary-darkerBrown) p-[9px] rounded-[16px]">Preparing for official FCE certification exam</div>
+              </div>
+              <div class="swiper-slide">
+                <div data-i18n="skills_section.slide3_title" class=" font-medium uppercase text-[16px] text-(--color-text-soft) dark:text-(--color-cream)">WEB DESIGN</div>
+
+                <div class="flex flex-col gap-[8px] w-full bg-green-950 dark:bg-(--color-secondary-dark-beige) p-[15px] rounded-[16px]">
+                  <p data-i18n="skills_section.slide3_subtitle" class="text-(--color-cream) dark:text-(--color-secondary-darkerBrown) text-[14px]">Design Skills:</p>
+
+                  <div class="bg-(--color-text-soft) p-[7px] text-[12px] rounded-[16px] text-(--color-secondary) font-[600] w-[180px]">UI/UX Principles</div>
+                  <div class="bg-(--color-text-soft) p-[7px] text-[12px] rounded-[16px] text-(--color-secondary) font-[600] w-[180px]">Figma & Layouts</div>
+                  <div class="bg-(--color-text-soft) p-[7px] text-[12px] rounded-[16px] text-(--color-secondary) font-[600] w-[180px]">Visual Aesthetics</div>
+                </div>
+
+                <div data-i18n="skills_section.slide3_note" class="text-center text-[12px] text-(--color-cream) dark:text-(--color-secondary-darkerBrown) bg-green-950 dark:bg-(--color-secondary-dark-beige) p-[9px] rounded-[16px]">Udemy web design courses & practice</div>
+              </div>
+              <div class="swiper-slide">
+                <div data-i18n="skills_section.slide4_title" class="font-medium uppercase text-[16px] text-(--color-text-soft) dark:text-(--color-cream)">PRACTICE & PROJECTS</div>
+
+                <div class="flex flex-col gap-[8px] w-full bg-yellow-900 dark:bg-(--color-secondary-dark-beige) p-[15px] rounded-[16px]">
+                  <p data-i18n="skills_section.slide4_subtitle" class="text-(--color-cream) dark:text-(--color-secondary-darkerBrown) text-[14px]">Real Experience:</p>
+
+                  <div class="bg-(--color-text-soft) p-[7px] text-[12px] rounded-[16px] text-(--color-secondary) font-[600] w-[180px]">Pet Projects Development</div>
+                  <div class="bg-(--color-text-soft) p-[7px] text-[12px] rounded-[16px] text-(--color-secondary) font-[600] w-[180px]">Integration API</div>
+                  <div class="bg-(--color-text-soft) p-[7px] text-[12px] rounded-[16px] text-(--color-secondary) font-[600] w-[180px]">Responsive Web Design</div>
+                </div>
+
+                <div data-i18n="skills_section.slide4_note" class="text-center text-[12px] text-(--color-cream) dark:text-(--color-secondary-darkerBrown) bg-yellow-900 dark:bg-(--color-secondary-dark-beige) p-[9px] rounded-[16px]">Building real apps from idea to deploy</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="max-w-[357px] w-full flex flex-col items-start justify-start gap-[25px]">
+
+          <div class="w-full flex flex-col gap-[10px]">
+            <h3 data-i18n="skills_section.title" class="subtitle uppercase font-medium text-[28px] text-(--color-cream)  leading-none">My skills</h3>
+            <div class="relative h-[2px] bg-(--color-cream)">
+              <div class="absolute flex justify-center items-center w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) top-1/2 -translate-y-1/2 left-[65%]">
+                <span class="text-(--color-secondary) text-[16px] font-bold">01</span>
+              </div>
+            </div>
+          </div>
+
+          <p data-i18n="skills_section.description" class=" text-(--color-cream) text-[16px]">I aim to create flexible, modern, and visually appealing websites that combine
+            user-friendly design with clean, high-quality code</p>
+
+          <div class="flex flex-col w-full gap-[10px] p-[25px] bg-(--color-main) dark:bg-(--color-secondary-dark-beige) rounded-[16px]">
+            <div class="flex items-center gap-[20px]">
+              <div class="relative w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) dark:bg-(--color-secondary-darkerBrown)">
+                <div class="absolute bottom-[8px] left-[5px] w-[30px] h-[30px]"><img class="w-[30px] h-[30px]" src="src/assets/photos/section3/my_skills/mobile_first.png" alt="Mobile-First"></div>
+              </div>
+              <span data-i18n="skills_section.skill_1" class="text-[16px] font-medium text-(--color-text-light) dark:text-(--color-secondary-darkerBrown)">Mobile-First Approach</span>
+            </div>
+
+            <div class="flex items-center gap-[20px]">
+              <div class="relative w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) dark:bg-(--color-secondary-darkerBrown)">
+                <div class="absolute bottom-[8px] left-[5px] w-[30px] h-[30px]"><img class="w-[30px] h-[30px]" src="src/assets/photos/section3/my_skills/interactive.png" alt="Clean Code"></div>
+              </div>
+              <span data-i18n="skills_section.skill_2" class="text-[16px] font-medium text-(--color-text-light) dark:text-(--color-secondary-darkerBrown)">Rapid Dev Tailwind CSS</span>
+            </div>
+
+            <div class="flex items-center gap-[20px]">
+              <div class="relative w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) dark:bg-(--color-secondary-darkerBrown)">
+                <div class="absolute bottom-[8px] left-[5px] w-[30px] h-[30px]"><img class="w-[30px] h-[30px]" src="src/assets/photos/section3/my_skills/code.png" alt="Clean Code"></div>
+              </div>
+              <span data-i18n="skills_section.skill_3" class="text-[16px] font-medium text-(--color-text-light) dark:text-(--color-secondary-darkerBrown)">Pixel Perfect</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<!--      why me-->
+      <div class="max-w-[800px] w-full flex flex-col gap-[30px] mt-[50px]">
+
+        <div class="w-full flex flex-col gap-[10px]">
+          <h3 data-i18n="why_me.title" class="subtitle uppercase font-medium text-[28px] text-(--color-cream)  leading-none">WHY ME?</h3>
+          <div class="relative h-[2px] bg-(--color-cream)">
+            <div class="absolute flex justify-center items-center w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) top-1/2 -translate-y-1/2 left-[25%]">
+              <span class="text-(--color-secondary) text-[16px] font-bold">02</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-between ">
+          <div class=" visibility relative  flex flex-col gap-[20px] items-center max-w-[180px] h-[170px] p-[20px] w-full bg-(--color-secondary) dark:bg-(--color-secondary-lightBrown2) rounded-[16px]">
+            <div class="absolute z-10 w-[36px] h-[36px] top-1/2 -translate-y-1/2 right-[-32px]"><img class="w-[36px] h-[36px]" src="src/assets/photos/section3/why_me/right-arrow.png" alt=""></div>
+            <div class="w-[45px] h-[45px]"><img class="w-[45px] h-[45px]" src="src/assets/photos/section3/why_me/workflow.png" alt=""></div>
+            <div data-i18n="why_me.card1_title" class="style-line relative text-center uppercase font-medium text-[10px] text-(--color-cream) leading-none">Git & Workflow</div>
+
+            <div data-i18n="why_me.card1_desc" class="hover z-2 absolute w-full top-[70%] bottom-0 bg-(--color-secondary-light) rounded-[16px] text-center p-[8px] text-[12px] text-(--color-text-light)">Version control, branching, code review</div>
+          </div>
+
+          <div class="visibility z-9 relative  flex flex-col gap-[20px] items-center max-w-[180px] h-[170px] p-[20px] w-full bg-(--color-secondary) dark:bg-(--color-secondary-lightBrown2) rounded-[16px]">
+            <div class="absolute  w-[36px] h-[36px] top-1/2 -translate-y-1/2 right-[-32px]"><img class="w-[36px] h-[36px]" src="src/assets/photos/section3/why_me/right-arrow.png" alt=""></div>
+            <div class="w-[45px] h-[45px]"><img class="w-[45px] h-[45px]" src="src/assets/photos/section3/why_me/fast_learner.png" alt=""></div>
+            <div data-i18n="why_me.card2_title" class="style-line relative text-center uppercase font-medium text-[10px] text-(--color-cream) leading-none">Fast Learner</div>
+
+            <div data-i18n="why_me.card2_desc" class="hover absolute z-2 w-full top-[70%] bottom-0 bg-(--color-secondary-light) rounded-[16px] text-center p-[8px] text-[12px] text-(--color-text-light)">Quick adaptation to new tools, frameworks</div>
+          </div>
+
+          <div class="visibility relative  flex flex-col gap-[20px] items-center max-w-[180px] h-[170px] p-[20px] w-full bg-(--color-secondary) dark:bg-(--color-secondary-lightBrown2) rounded-[16px]">
+            <div class="absolute z-9 w-[36px] h-[36px] top-1/2 -translate-y-1/2 right-[-32px]"><img class="w-[36px] h-[36px]" src="src/assets/photos/section3/why_me/right-arrow.png" alt=""></div>
+            <div class="w-[45px] h-[45px]"><img class="w-[45px] h-[45px]" src="src/assets/photos/section3/why_me/responsibility.png" alt=""></div>
+            <div data-i18n="why_me.card3_title" class="style-line relative text-center uppercase font-medium text-[10px] text-(--color-cream) leading-none">Responsibility</div>
+
+            <div data-i18n="why_me.card3_desc" class="hover absolute z-2 w-full top-[70%] bottom-0 bg-(--color-secondary-light) rounded-[16px] text-center p-[8px] text-[12px] text-(--color-text-light)">Strict adherence to deadlines </div>
+          </div>
+
+          <div class="visibility z-8 relative  flex flex-col gap-[20px] items-center max-w-[180px] h-[170px] p-[20px] w-full bg-(--color-secondary) dark:bg-(--color-secondary-lightBrown2) rounded-[16px]">
+            <div class="w-[45px] h-[45px]"><img class="w-[45px] h-[45px]" src="src/assets/photos/section3/why_me/attention.png" alt=""></div>
+            <div data-i18n="why_me.card4_title" class="style-line relative text-center uppercase font-medium text-[10px] text-(--color-cream) leading-none">Attention to Detail</div>
+
+            <div data-i18n="why_me.card4_desc" class="hover absolute z-2 w-full top-[70%] bottom-0 bg-(--color-secondary-light) rounded-[16px] text-center p-[8px] text-[12px] text-(--color-text-light)">Pixel-perfect layout, clean styling</div>
+          </div>
+        </div>
+
+      </div>
+
+<!--     my works-->
+      <div  class="max-w-[800px] w-full  mt-[50px] bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown2) pt-[40px] pb-[60px] px-[30px]">
+
+        <div class="flex flex-col gap-[30px]">
+          <div class="w-full flex flex-col gap-[10px]">
+            <h3 data-i18n="works.title" class="subtitle uppercase font-medium text-[28px] text-(--color-cream)  leading-none">My works</h3>
+            <div class="relative h-[2px] bg-(--color-cream)">
+              <div class="absolute flex justify-center items-center w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) top-1/2 -translate-y-1/2 left-[30%]">
+                <span class="text-(--color-secondary) text-[16px] font-bold">03</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="flex justify-between gap-[40px] items-start bg-(--color-main) dark:bg-(--color-secondary-dark-beige) rounded-[16px] p-[30px]">
+            <p data-i18n="works.description" class="text-(--color-cream) dark:text-(--color-secondary-darkerBrown) font-medium text-[16px] max-w-[430px] w-full">My projects show how I combine design and coding skills to create websites that look good and work well on any device</p>
+            <a href="/portfolio.html" target="_blank" data-i18n="works.button" class="btn-secondary">MY PORTFOLIO</a>
+          </div>
+        </div>
+
+        <!--     contacts-->
+        <div id="contacts" class="flex flex-col gap-[30px] mt-[50px]">
+          <div class="w-full flex flex-col gap-[10px]">
+            <h3 data-i18n="contacts.title" class="subtitle text-end uppercase font-medium text-[28px] text-(--color-cream)  leading-none">Contacts</h3>
+            <div class="relative h-[2px] bg-(--color-cream)">
+              <div class="absolute flex justify-center items-center w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) top-1/2 -translate-y-1/2 left-[71%]">
+                <span class="text-(--color-secondary) text-[16px] font-bold">04</span>
+              </div>
+            </div>
+          </div>
+
+          <p data-i18n="contacts.description" class="text-(--color-cream) text-[16px] text-center">You can always find me on these social platforms — I’m open to communication, feedback, and happy to collaborate</p>
+
+          <div class="flex flex-wrap justify-around gap-x-[120px] gap-y-[30px] bg-(--color-main) dark:bg-(--color-secondary-dark-beige) rounded-[16px] p-[30px]">
+
+            <a href="https://github.com/Annet2804" target="_blank" rel="noopener noreferrer" class="w-[80px] h-[80px] bg-(--color-cream) rounded-[50%]"><img class="animation-scale" alt="" src="src/assets/photos/section2/contacts/github.png"></a>
+            <a href="https://t.me/ann_1_2804" target="_blank" rel="noopener noreferrer" class="w-[84px] h-[84px]  rounded-[50%]"><img class="animation-scale" alt="" src="src/assets/photos/section2/contacts/Telegram.png"></a>
+            <a href="https://wa.me/380957215737" target="_blank" rel="noopener noreferrer" class="w-[80px] h-[80px] bg-(--color-cream) rounded-[50%]"><img class="animation-scale" alt="" src="src/assets/photos/section2/contacts/whatsapp.png"></a>
+
+            <a href="viber://chat?number=%2B380957215737" target="_blank" rel="noopener noreferrer" class="w-[80px] h-[80px] bg-(--color-cream) rounded-[50%]"><img class="animation-scale" alt="" src="src/assets/photos/section2/contacts/viber.png"></a>
+            <a href="https://www.instagram.com/annet_2804?knvt=MTFlNXQxd3p5OTRmNA==" target="_blank" rel="noopener noreferrer" class="w-[80px] h-[80px] bg-(--color-cream) rounded-[50%]"><img class="animation-scale" alt="" src="src/assets/photos/section2/contacts/instagram.png"></a>
+            <a href="https://www.behance.net/14fd6204" target="_blank" rel="noopener noreferrer" class="w-[80px] h-[80px] bg-(--color-cream) rounded-[50%]"><img class="animation-scale" alt="" src="src/assets/photos/section2/contacts/behance.png"></a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--  footer  -->
+<footer class="flex items-center bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown2) h-[100px] p-[12px]">
+  <div class="container">
+
+      <div class="flex flex-col gap-[15px]">
+        <div class="flex items-center justify-between">
+          <a class="header-logo" href=""><img alt="Main page - Anna Zakharova" class="w-[40px] h-auto" src="src/assets/photos/section1/logo.png"></a>
+
+          <div class="flex items-center  gap-[12px]">
+            <a href="https://github.com/Annet2804" target="_blank" rel="noopener noreferrer" class="w-[30px] h-[30px] bg-(--color-cream) rounded-[50%]"><img class="w-[30px] h-[30px] animation-scale" alt="" src="src/assets/photos/section2/contacts/github.png"></a>
+            <a href="https://t.me/ann_1_2804" target="_blank" rel="noopener noreferrer" class="w-[30px] h-[30px] bg-(--color-cream) rounded-[50%]"><img class="w-[33px] h-[33px] animation-scale bg-cover" alt="" src="src/assets/photos/section2/contacts/Telegram.png"></a>
+            <a href="https://www.instagram.com/annet_2804?knvt=MTFlNXQxd3p5OTRmNA==" target="_blank" rel="noopener noreferrer" class="w-[30px] h-[30px] bg-(--color-cream) rounded-[50%]"><img class="w-[30px] h-[30px] animation-scale" alt="" src="src/assets/photos/section2/contacts/instagram.png"></a>
+
+            <a href="https://mail.google.com/mail/?view=cm&to=anna.zakharova.dev@gmail.com" target="_blank" rel="noopener noreferrer" class="w-[30px] h-[30px] bg-(--color-cream) rounded-[50%]"><img class="w-[30px] h-[30px] animation-scale" alt="" src="src/assets/photos/section2/contacts/email.png"></a>
+            <a href="viber://chat?number=%2B380957215737" target="_blank" rel="noopener noreferrer" class="w-[30px] h-[30px] bg-(--color-cream) rounded-[50%]"><img class="w-[30px] h-[30px] animation-scale" alt="" src="src/assets/photos/section2/contacts/viber.png"></a>
+          </div></div>
+
+        <div><p data-i18n="footer.rights" class="text-[10px] text-(--color-cream) text-middle text-end">© 2026 Anna Zakharova. All rights reserved</p></div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- modal Window  -->
+<div class="modalWindow fixed inset-0 z-50 items-center justify-center bg-black/60 backdrop-blur-xs" id="modalWindow" style="display: none;">
+  <form class="form relative flex flex-col justify-center items-start p-[24px] bg-(--color-block-main) dark:bg-(--color-secondary-dark-light) text-(--color-cream) rounded-[18px] max-w-[400px] w-full mx-[20px] shadow-2xl" id="form">
+
+    <h3 data-i18n="modal.title" class=" text-[18px] font-bold uppercase mb-[15px]">Get in Touch</h3>
+    <p data-i18n="modal.subtitle" class=" text-[14px] text-(--color-text-soft) mb-[20px]">Leave a message, and I'll get in touch with you!</p>
+
+    <input
+            type="text"
+            id="name"
+            data-i18n-placeholder="modal.name_placeholder"
+            placeholder="Your Name"
+            required
+            class="w-full mb-[14px] px-[16px] py-[12px] bg-white/5 hover:bg-white/10 focus:bg-white/10 border border-white/10 focus:border-(--color-cream)/50 rounded-[12px] text-[14px] text-white placeholder:text-white/40 outline-none transition-all duration-200"
+    >
+
+    <!-- Email -->
+    <input
+            type="email"
+            id="email"
+            data-i18n-placeholder="modal.email_placeholder"
+            placeholder="Your Email"
+            required
+            class="w-full mb-[14px] px-[16px] py-[12px] bg-white/5 hover:bg-white/10 focus:bg-white/10 border border-white/10 focus:border-(--color-cream)/50 rounded-[12px] text-[14px] text-white placeholder:text-white/40 outline-none transition-all duration-200"
+    >
+
+    <textarea
+            id="message"
+            rows="4"
+            data-i18n-placeholder="modal.message_placeholder"
+            placeholder="Write your message here..."
+            required
+            class="w-full mb-[24px] px-[16px] py-[12px] bg-white/5 hover:bg-white/10 focus:bg-white/10 border border-white/10 focus:border-(--color-cream)/50 rounded-[12px] text-[14px] text-white placeholder:text-white/40 outline-none resize-none transition-all duration-200"
+    ></textarea>
+
+    <button type="button" class="close absolute top-[15px] right-[15px] bg-transparent border-none font-bold text-[18px] text-(--color-text-soft) hover:text-white cursor-pointer" id="close">✕</button>
+
+    <button data-i18n="modal.submit_btn" type="submit" class="btn-secondary ">Submit</button>
+  </form>
+</div>
+
+
+<!-- buttons  -->
+<div class="fixed right-[20px] bottom-[20px] flex flex-col gap-[10px] z-10">
+
+  <button id="openModalBtn" class="buttonModal w-[45px] h-[45px] rounded-[50%] bg-(--color-secondary) dark:bg-(--color-secondary-dark-light)  text-(--color-cream) flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 cursor-pointer" title="Contact Me">
+    <svg class="w-[20px] h-[20px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+    </svg>
+  </button>
+
+  <button id="scrollToTopBtn" class="w-[45px] h-[45px] rounded-[50%] bg-(--color-secondary) dark:bg-(--color-secondary-dark-light)  text-(--color-cream) flex items-center justify-center shadow-lg opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 cursor-pointer" title="Scroll to top">
+    <svg class="w-[20px] h-[20px]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"></path>
+    </svg>
+  </button>
+</div>
+
+
+</div>
+    <div id="app"></div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+
+
+
+

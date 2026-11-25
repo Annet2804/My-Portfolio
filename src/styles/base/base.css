@@ -1,0 +1,32 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+#about{
+    scroll-margin-top: 80px;
+}
+#skills{
+    scroll-margin-top: 50px;
+}
+
+
+/*main container*/
+@utility container{
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: var(--color-main);
+
+    margin: 0;
+}
+
+.dark body {
+    background-color: var(--color-secondary-lightBrown);
+}
+
+

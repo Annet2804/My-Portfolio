@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/*base*/
+@import './styles/base/base.css';
+@import './styles/base/fonts.css';
+@import './styles/base/colors.css';
+
+/*components*/
+@import './styles/components/buttons.css';
+@import './styles/components/subtitles.css';
+@import './styles/components/animations.css';
+
+/*sections*/
+@import './styles/sections/header.css';
+@import './styles/sections/aside.css';
+@import './styles/sections/hero.css';
+@import './styles/sections/about_me.css';
+@import './styles/sections/skills.css';
+@import './styles/sections/why_me.css';
+
+@custom-variant dark (&:where(.dark, .dark *));

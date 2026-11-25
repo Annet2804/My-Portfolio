@@ -1,0 +1,27 @@
+.hero-section {
+    background-image: url('../../assets/photos/section1/Anna.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    align-items: start;
+    position: relative;
+    min-height: calc(100vh - 200px);
+}
+
+/*blink cursor hero section*/
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.typing-text::after {
+    content: "|";
+    display: inline-block;
+    animation: blink 0.7s infinite;
+    color: var(--color-secondary);
+    margin-left: 2px;
+}
+
+

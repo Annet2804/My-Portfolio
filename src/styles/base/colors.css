@@ -1,0 +1,31 @@
+/*colors and fonts*/
+@theme{
+    /*кольори*/
+    --color-main: #230802;
+    --color-secondary: #422A24;
+
+    --color-secondary-light: color-mix(in srgb, #C6AD9563 20%, transparent);
+    --color-cream: #F0D4C0;
+
+    --color-text-light: color-mix(in srgb, #F0D4C0 60%, transparent);
+    --color-text-soft: color-mix(in srgb, #FFFFFF 55%, transparent);
+
+    --color-block-main: #2E1A15;
+    --color-line: #C6AD9563;
+
+    --color-btn-primary: #422A24;
+    --color-btn-secondary: #C6AD95;
+
+
+    /*colors for white theme*/
+    --color-secondary-lightBrown: #6e3232;
+    --color-secondary-darkerBrown: #4a2727;
+    --color-secondary-dark-light: #582a29;
+    --color-secondary-dark-beige: #c6a495;
+    --color-secondary-lighterBrown: #7a4646;
+    --color-secondary-lightBrown2: #7E4440;
+
+    /*шрифти*/
+    --font-sans: 'Montserrat', sans-serif;
+}
+

@@ -1,0 +1,41 @@
+
+.header-nav a {
+    position: relative;
+    color: var(--color-cream);
+    font-size: 19px;
+    font-weight: 600;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.header-nav a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(240, 212, 192, 0.6), 0 0 20px rgba(240, 212, 192, 0.4);
+}
+
+.header-nav a::after {
+    position: absolute;
+    content: "";
+    background-color: #ffffff;
+    height: 2px;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: all 0.3s ease;
+}
+
+.header-nav a:hover::after{
+    transform: scaleX(1);
+}
+
+.header-logo img{
+    transition: all 0.3s ease;
+}
+
+.header-logo img:hover{
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 10px rgba(240, 212, 192, 0.88));
+}
