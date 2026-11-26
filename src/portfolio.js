@@ -1,6 +1,13 @@
 import './style.css';
 import { updateLanguage } from './main.js';
 
+import carImg from './assets/photos/works/Car.jpg';
+import ceramicSoulImg from './assets/photos/works/CeramicSoul.jpg';
+import flappyBirdImg from './assets/photos/works/FlappyBirdGame.jpg';
+import weatherWidgetImg from './assets/photos/works/WeatherWidget.jpg';
+import monStuImg from './assets/photos/works/MonovisionStudio.png';
+import aliImg from './assets/photos/works/Ali.jpg';
+
 const projects = [
     {
         id: 1,
@@ -10,7 +17,7 @@ const projects = [
         year: "13 June 2025",
         date: "2025-06-13",
         technologies: ["HTML", "CSS", "Tailwind CSS"],
-        image: "/src/assets/photos/works/Car.jpg",
+        image: carImg,
         github: "https://github.com/Annet2804/SiteCar.git",
         live: "https://annet2804.github.io/SiteCar/"
     },
@@ -22,7 +29,7 @@ const projects = [
         year: "23 October 2025",
         date: "2025-10-23",
         technologies: ["HTML", "SCSS", "Vite"],
-        image: "/src/assets/photos/works/CeramicSoul.jpg",
+        image: ceramicSoulImg,
         github: "https://github.com/Annet2804/Ceramic-Soul-Project.git",
         live: "https://annet2804.github.io/Ceramic-Soul-Project/"
     },
@@ -34,7 +41,7 @@ const projects = [
         year: "01 January 2026",
         date: "2026-01-19",
         technologies: ["HTML", "CSS", "JavaScript"],
-        image: "/src/assets/photos/works/FlappyBirdGame.jpg",
+        image: flappyBirdImg,
         github: "https://github.com/Annet2804/Flappy_bird_game.git",
         live: "https://annet2804.github.io/Flappy_bird_game/"
     },
@@ -46,21 +53,21 @@ const projects = [
         year: "19 October 2026",
         date: "2026-10-19",
         technologies: ["HTML", "CSS", "JavaScript"],
-        image: "/src/assets/photos/works/WeatherWidget.jpg",
+        image: weatherWidgetImg,
         github: "https://github.com/Annet2804/WeatherWidget.git",
         live: "https://annet2804.github.io/WeatherWidget/"
     },
     {
         id: 5,
-        title: "Project Name 2",
-        shortDescription: "A dynamic glassmorphic weather widget integrating OpenWeatherMap API ",
-        year: "19 October 2026",
+        title: "Monovision Studio Landing Page",
+        shortDescription: "A sleek monochrome portfolio landing page for a photography studio built with CSS Grid and Gulp ",
+        year: "07 December 2025",
         date: "2026-10-19",
-        technologies: ["HTML", "SCSS", "Vite"],
-        description: "Короткий Короткий опис проекту , створеного з хтмл , ссс, тайлвінд Короткий опис проекту , створеного з хтмл , ссс, тайлвінд опис проекту , створеного з хтмл , ссс, тайлвінд",
-        image: "/src/assets/photos/works/Ali.jpg",
-        github: "https://github.com/Annet2804/SiteCar.git",
-        live: "https://annet2804.github.io/SiteCar/"
+        technologies: ["HTML", "SCSS", "Gulp"],
+        description: "A minimalist black-and-white portfolio website crafted for a creative photography studio. The layout features a bold full-screen hero section, photography category navigation, and multi-column gallery showcases ('Our works' and 'Our inspiration') built using responsive CSS Grid. Engineered with semantic HTML, modular SCSS, and automated via a custom Gulp build workflow.",
+        image: monStuImg,
+        github: "https://github.com/Annet2804/Monovision-Studio.git",
+        live: "https://annet2804.github.io/Monovision-Studio/src/"
     },
 ];
 

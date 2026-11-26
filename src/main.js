@@ -256,6 +256,9 @@ const translations = {
 
             title4: "Weather Widget App",
             description4: "A sleek browser weather application featuring real-time city search, dynamic weather icons, current time with timezone awareness, and detailed metrics (feels like, humidity, wind speed, high/low range). Includes a 5-day weather forecast breakdown and modern glassmorphism UI styling.",
+
+            title5: "Monovision Studio Landing Page",
+            description5: "A minimalist black-and-white portfolio website crafted for a creative photography studio. The layout features a bold full-screen hero section, photography category navigation, and multi-column gallery showcases ('Our works' and 'Our inspiration') built using responsive CSS Grid. Engineered with semantic HTML, modular SCSS, and automated via a custom Gulp build workflow.",
         },
 
         filter:{
@@ -393,6 +396,9 @@ const translations = {
 
             title4: "Додаток Weather Widget",
             description4: "Лаконічний браузерний погодний додаток із пошуком міста в реальному часі, динамічними іконками погоди, поточним часом з урахуванням часового поясу та детальними метриками (відчувається як, вологість, швидкість вітру, діапазон мінімальної та максимальної температури). Передбачено прогноз погоди на 5 днів і сучасний інтерфейс у стилі гласморфізму.",
+
+            title5: "Лендінг Monovision Studio",
+            description5: "Мінімалістичний чорно-білий лендінг, створений для креативної фотостудії. Макет містить виразний повноекранний головний екран, навігацію за категоріями фотографії та багатоколонкові галереї («Our works» і «Our inspiration»), побудовані за допомогою адаптивного CSS Grid. Розроблено з використанням семантичного HTML, модульного SCSS та автоматизовано через кастомну збірку Gulp.",
 
         },
 
