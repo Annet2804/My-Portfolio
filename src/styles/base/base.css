@@ -15,8 +15,24 @@ html {
 
 /*main container*/
 @utility container{
-    max-width: 1350px;
+    max-width: 1440px;
     margin: 0 auto;
+
+    padding-inline: 16px; /* малі мобільні */
+
+    @media (width >= 48rem) { /* планшети (768px) */
+        padding-inline: 20px;
+    }
+
+    @media (width >= 64rem) { /* більші планшети / lg (1024px) */
+        padding-inline: 30px;
+    }
+
+    @media (width >= 90rem) { /* десктоп (1440px — як зараз) */
+        padding-inline: 45px;
+    }
+
+
 }
 
 body {

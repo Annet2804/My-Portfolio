@@ -5,6 +5,7 @@ import './style.css'
 // swiper
 //тільки основна сторінка
 
+document.addEventListener('DOMContentLoaded', () => {
 const swiperEl = document.querySelector('.mySwiper');
 if (swiperEl) {
 const swiper = new Swiper('.mySwiper', {
@@ -21,7 +22,7 @@ const swiper = new Swiper('.mySwiper', {
         slideShadows: true,
     },
 });
-}
+}});
 
 //тільки основна сторінка
 const scrollBtn = document.getElementById('scrollToTopBtn');

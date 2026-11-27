@@ -7,7 +7,23 @@
     display: flex;
     align-items: start;
     position: relative;
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 300px);
+
+    @media (width >= 48rem) { /* планшети (768px) */
+
+    }
+
+    @media (width >= 64rem) { /* більші планшети / lg (1024px) */
+        min-height: calc(100vh - 250px);
+    }
+
+    @media (width >= 90rem) { /* десктоп (1440px — як зараз) */
+        min-height: calc(100vh - 200px);
+    }
+}
+
+.hero-section-mobile{
+
 }
 
 /*blink cursor hero section*/

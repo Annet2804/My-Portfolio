@@ -18,14 +18,16 @@
 <!--  header -->
   <header class="sticky top-0 left-0 z-20 bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown) h-[60px] flex items-center">
     <div class="container w-full">
-      <nav class="flex items-center justify-between">
+      <nav class=" flex items-center justify-between">
         <a class="header-logo"  href="./index.html"  ><div class="w-[38px] h-auto"><img alt="Main page - Anna Zakharova" class="w-[38px] h-auto cover" src="src/assets/photos/section1/logo.png"></div></a>
         <div class="header-nav flex items-center gap-[60px] tracking-[1.2px]">
-          <a href="#about" data-i18n="nav.about">ABOUT ME</a>
-          <a href="#skills" data-i18n="nav.skills">SKILLS</a>
-          <a href="./portfolio.html" target="_blank" data-i18n="nav.portfolio">PORTFOLIO</a>
-          <a href="#contacts" data-i18n="nav.contacts">CONTACTS</a>
+          <div class="hidden lg:flex header-nav  items-center gap-[60px] tracking-[1.2px]">
+            <a href="#about" data-i18n="nav.about">ABOUT ME</a>
+            <a href="#skills" data-i18n="nav.skills">SKILLS</a>
+            <a href="./portfolio.html" target="_blank" data-i18n="nav.portfolio">PORTFOLIO</a>
+            <a href="#contacts" data-i18n="nav.contacts">CONTACTS</a>
 
+          </div>
 
           <div class="flex items-center justify-between gap-[14px]">
             <!--          theme-->
@@ -118,12 +120,17 @@
   </header>
 
 <!--  section hero -->
-<section>
+ <section class="md:hidden">
+   <div class="hero-section-mobile "><img class="w-[100%] h-auto mt-[50px] bg-cover" alt="My-Portfolio-Frontend" src="src/assets/photos/section1/Photo_porf_mobile.png"></div>
+ </section>
+
+
+<section class="hidden md:block">
   <div class="hero-section ">
-    <div class="container w-full">
-      <div class="flex flex-col gap-[40px] justify-start items-start">
-        <h1  class="text-[56px] text-(--color-secondary) dark:text-(--color-secondary-lightBrown) font-bold mt-[80px] tracking-[1.2px]">FRONTEND DEVELOPER</h1>
-        <p data-i18n="hero.description" class="typing-text max-w-[608px] text-[24px] text-(--color-secondary) dark:text-(--color-secondary-lightBrown) font-[500] italic min-h-[150px]  flex-shrink-0">Hi, I’m Anna Zakharova — a Frontend Developer who builds modern, user-friendly,
+    <div class="container w-full ">
+      <div class="flex flex-col gap-[20px] justify-start items-start">
+        <h1  class="text-[30px] lg:text-[40px] xl:text-[52px] text-(--color-secondary) dark:text-(--color-secondary-lightBrown) font-bold mt-[50px] tracking-[1.2px]">FRONTEND DEVELOPER</h1>
+        <p  data-i18n="hero.description" class="typing-text max-w-[420px] lg:max-w-[500px] xl:max-w-[608px] text-[16px] lg:text-[18px] xl:text-[24px] text-(--color-secondary) dark:text-(--color-secondary-lightBrown) font-[500] italic min-h-[150px]  flex-shrink-0">Hi, I’m Anna Zakharova — a Frontend Developer who builds modern, user-friendly,
           and functional web applications. I combine technical skills with a creative
           approach to bring ideas to life</p>
         <a href="./portfolio.html" target="_blank" data-i18n="hero.button" class="btn-primary mt-[5px]">MY PORTFOLIO</a>
@@ -135,10 +142,10 @@
 <!--block aside + main-->
 <section class="mt-[60px] mb-[60px]">
 
-  <div class="container w-full flex justify-between">
+  <div class="container w-full flex gap-[45px] justify-between">
 
     <!--  section aside-->
-    <aside class="max-w-[450px] w-full bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown2) py-[40px]">
+    <aside class="hidden lg:flex  min-w-[300px] max-w-[450px] w-full bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown2) py-[40px]">
 
       <div class="flex flex-col gap-[35px]">
 
@@ -358,12 +365,12 @@
 
 
 <!--    main section-->
-    <div class="flex flex-col max-w-[800px] w-full">
+    <div class="flex flex-col min-w-[280px] max-w-[900px] mx-auto  w-full">
 
 
 <!--      about me-->
-      <div id="about" class="relative flex flex-col gap-[36px] max-w-[800px] w-full bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown2) pt-[40px] pb-[60px] px-[30px] ">
-        <div  class="  flex justify-center items-center"><h2 data-i18n="about.title" class="relative subtitle subtitle-line uppercase font-medium text-[35px] text-(--color-cream)  leading-none">About me</h2></div>
+      <div id="about" class="relative flex flex-col gap-[36px]  w-full bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown2) pt-[40px] pb-[60px] px-[30px] ">
+        <div  class="  flex justify-center items-center"><h2 data-i18n="about.title" class="relative subtitle subtitle-line uppercase font-medium text-[22px] md:text-[35px] text-(--color-cream)  leading-none">About me</h2></div>
         <p data-i18n="about.description" class="text-center text-(--color-cream) text-[16px]">Hi! I'm Anna Zakharova, a beginner frontend developer focused on creating beautiful, flexible, and user-friendly websites.
           With a background in Computer Science and current studies at IT Step Academy,
           I’m building strong skills in HTML, CSS, Git, and GitHub, while actively learning JavaScript.
@@ -373,7 +380,7 @@
 
         <a href="/portfolio.html" target="_blank" data-i18n="about.button" class="btn-secondary">MY PORTFOLIO</a>
 
-        <div class="absolute overflow-hidden  px-[40px] py-[20px] bottom-[-36px] rounded-[50px] left-[50%] -translate-x-1/2 max-w-[700px] w-full h-[45px] font-medium text-(--color-text-light) bg-(--color-secondary) dark:bg-(--color-secondary-dark-light) ">
+        <div class="absolute overflow-hidden px-[40px] py-[20px] bottom-[-36px] rounded-[50px] left-[50%] -translate-x-1/2 max-w-[380px] md:max-w-[420px]  lg:max-w-[470px] xl:max-w-[700px] w-full h-[45px] font-medium text-(--color-text-light) bg-(--color-secondary) dark:bg-(--color-secondary-dark-light) ">
           <div class="animate-marquee flex justify-between items-center h-full">
 
             <div class="flex justify-around w-full">
@@ -397,10 +404,8 @@
 
 
 <!--      my skills-->
-      <div id="skills" class="flex justify-between gap-[26px] max-w-[800px] w-full bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown2) mt-[30px] pt-[60px] pb-[60px] px-[50px]">
-
-
-        <div class=" max-w-[357px] flex flex-col items-start justify-start">
+      <div id="skills" class="flex  flex-wrap-reverse justify-center xl:justify-between gap-[46px]  w-full bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown2) mt-[30px] pt-[60px] pb-[60px] px-[50px]">
+        <div class="hidden lg:flex  max-w-[357px] flex-col items-start justify-start">
           <div class="swiper mySwiper ">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -415,8 +420,6 @@
                 </div>
 
                 <div data-i18n="skills_section.slide1_note" class="text-center text-[12px] text-(--color-cream) bg-red-950 dark:bg-(--color-secondary-dark-beige) dark:text-(--color-secondary-darkerBrown) p-[9px] rounded-[16px] ">IT Step Academy — completed a course with a certificate</div>
-
-
 
               </div>
               <div class="swiper-slide">
@@ -465,85 +468,88 @@
         </div>
 
 
-        <div class="max-w-[357px] w-full flex flex-col items-start justify-start gap-[25px]">
+        <div class="lg:max-w-[357px] w-full flex flex-col items-start justify-start gap-[25px]">
 
-          <div class="w-full flex flex-col gap-[10px]">
-            <h3 data-i18n="skills_section.title" class="subtitle uppercase font-medium text-[28px] text-(--color-cream)  leading-none">My skills</h3>
-            <div class="relative h-[2px] bg-(--color-cream)">
-              <div class="absolute flex justify-center items-center w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) top-1/2 -translate-y-1/2 left-[65%]">
+          <div class="w-fit xl:w-full mx-auto xl:mx-0 flex flex-col gap-[10px]">
+            <h3 data-i18n="skills_section.title" class="subtitle uppercase font-medium text-[22px] md:text-[28px] text-(--color-cream) text-center xl:text-left leading-none">My skills</h3>
+            <div class="relative  inline-block mx-auto w-[100%] xl:mx-0 h-[2px] bg-(--color-cream)">
+              <div class="absolute justify-center items-center w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) top-1/2 -translate-y-1/2 hidden xl:flex md:left-[90%] xl:left-[65%]">
                 <span class="text-(--color-secondary) text-[16px] font-bold">01</span>
               </div>
             </div>
           </div>
 
-          <p data-i18n="skills_section.description" class=" text-(--color-cream) text-[16px]">I aim to create flexible, modern, and visually appealing websites that combine
-            user-friendly design with clean, high-quality code</p>
+          <div class="w-fit xl:w-full mx-auto xl:mx-0 flex-col md:flex lg:flex-col gap-y-1.5 gap-x-1.5">
+            <p data-i18n="skills_section.description" class=" text-(--color-cream) text-center  xl:text-left text-[16px]">I aim to create flexible, modern, and visually appealing websites that combine
+              user-friendly design with clean, high-quality code</p>
 
-          <div class="flex flex-col w-full gap-[10px] p-[25px] bg-(--color-main) dark:bg-(--color-secondary-dark-beige) rounded-[16px]">
-            <div class="flex items-center gap-[20px]">
-              <div class="relative w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) dark:bg-(--color-secondary-darkerBrown)">
-                <div class="absolute bottom-[8px] left-[5px] w-[30px] h-[30px]"><img class="w-[30px] h-[30px]" src="src/assets/photos/section3/my_skills/mobile_first.png" alt="Mobile-First"></div>
+            <div class="flex flex-col w-full gap-[10px] p-[25px] mt-[20px] bg-(--color-main) dark:bg-(--color-secondary-dark-beige) rounded-[16px]">
+              <div class="flex items-center gap-[20px]">
+                <div class="relative w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) dark:bg-(--color-secondary-darkerBrown)">
+                  <div class="absolute bottom-[8px] left-[5px] w-[30px] h-[30px]"><img class="w-[30px] h-[30px]" src="src/assets/photos/section3/my_skills/mobile_first.png" alt="Mobile-First"></div>
+                </div>
+                <span data-i18n="skills_section.skill_1" class="text-[16px] font-medium text-(--color-text-light) dark:text-(--color-secondary-darkerBrown)">Mobile-First Approach</span>
               </div>
-              <span data-i18n="skills_section.skill_1" class="text-[16px] font-medium text-(--color-text-light) dark:text-(--color-secondary-darkerBrown)">Mobile-First Approach</span>
-            </div>
 
-            <div class="flex items-center gap-[20px]">
-              <div class="relative w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) dark:bg-(--color-secondary-darkerBrown)">
-                <div class="absolute bottom-[8px] left-[5px] w-[30px] h-[30px]"><img class="w-[30px] h-[30px]" src="src/assets/photos/section3/my_skills/interactive.png" alt="Clean Code"></div>
+              <div class="flex items-center gap-[20px]">
+                <div class="relative w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) dark:bg-(--color-secondary-darkerBrown)">
+                  <div class="absolute bottom-[8px] left-[5px] w-[30px] h-[30px]"><img class="w-[30px] h-[30px]" src="src/assets/photos/section3/my_skills/interactive.png" alt="Clean Code"></div>
+                </div>
+                <span data-i18n="skills_section.skill_2" class="text-[16px] font-medium text-(--color-text-light) dark:text-(--color-secondary-darkerBrown)">Rapid Dev Tailwind CSS</span>
               </div>
-              <span data-i18n="skills_section.skill_2" class="text-[16px] font-medium text-(--color-text-light) dark:text-(--color-secondary-darkerBrown)">Rapid Dev Tailwind CSS</span>
-            </div>
 
-            <div class="flex items-center gap-[20px]">
-              <div class="relative w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) dark:bg-(--color-secondary-darkerBrown)">
-                <div class="absolute bottom-[8px] left-[5px] w-[30px] h-[30px]"><img class="w-[30px] h-[30px]" src="src/assets/photos/section3/my_skills/code.png" alt="Clean Code"></div>
+              <div class="flex items-center gap-[20px]">
+                <div class="relative w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) dark:bg-(--color-secondary-darkerBrown)">
+                  <div class="absolute bottom-[8px] left-[5px] w-[30px] h-[30px]"><img class="w-[30px] h-[30px]" src="src/assets/photos/section3/my_skills/code.png" alt="Clean Code"></div>
+                </div>
+                <span data-i18n="skills_section.skill_3" class="text-[16px] font-medium text-(--color-text-light) dark:text-(--color-secondary-darkerBrown)">Pixel Perfect</span>
               </div>
-              <span data-i18n="skills_section.skill_3" class="text-[16px] font-medium text-(--color-text-light) dark:text-(--color-secondary-darkerBrown)">Pixel Perfect</span>
             </div>
           </div>
+
         </div>
       </div>
 
 
 <!--      why me-->
-      <div class="max-w-[800px] w-full flex flex-col gap-[30px] mt-[50px]">
+      <div class=" w-full flex flex-col gap-[30px] mt-[50px]">
 
-        <div class="w-full flex flex-col gap-[10px]">
-          <h3 data-i18n="why_me.title" class="subtitle uppercase font-medium text-[28px] text-(--color-cream)  leading-none">WHY ME?</h3>
-          <div class="relative h-[2px] bg-(--color-cream)">
-            <div class="absolute flex justify-center items-center w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) top-1/2 -translate-y-1/2 left-[25%]">
+        <div class="w-fit xl:w-full mx-auto xl:mx-0 flex flex-col gap-[10px]">
+          <h3 data-i18n="why_me.title" class="subtitle uppercase text-center xl:text-left font-medium text-[22px] md:text-[28px] text-(--color-cream)  leading-none">WHY ME?</h3>
+          <div class="relative inline-block mx-auto w-[100%] xl:mx-0 h-[2px] bg-(--color-cream)">
+            <div class="absolute  justify-center items-center w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) top-1/2 -translate-y-1/2 hidden xl:flex md:left-[25%] lg:left-[20%]">
               <span class="text-(--color-secondary) text-[16px] font-bold">02</span>
             </div>
           </div>
         </div>
 
-        <div class="flex justify-between ">
+        <div class="flex justify-center gap-[30px]   flex-wrap">
           <div class=" visibility relative  flex flex-col gap-[20px] items-center max-w-[180px] h-[170px] p-[20px] w-full bg-(--color-secondary) dark:bg-(--color-secondary-lightBrown2) rounded-[16px]">
-            <div class="absolute z-10 w-[36px] h-[36px] top-1/2 -translate-y-1/2 right-[-32px]"><img class="w-[36px] h-[36px]" src="src/assets/photos/section3/why_me/right-arrow.png" alt=""></div>
-            <div class="w-[45px] h-[45px]"><img class="w-[45px] h-[45px]" src="src/assets/photos/section3/why_me/workflow.png" alt=""></div>
+
+            <div class=" w-[45px] h-[45px]"><img class=" w-[45px] h-[45px]" src="src/assets/photos/section3/why_me/workflow.png" alt=""></div>
             <div data-i18n="why_me.card1_title" class="style-line relative text-center uppercase font-medium text-[10px] text-(--color-cream) leading-none">Git & Workflow</div>
 
             <div data-i18n="why_me.card1_desc" class="hover z-2 absolute w-full top-[70%] bottom-0 bg-(--color-secondary-light) rounded-[16px] text-center p-[8px] text-[12px] text-(--color-text-light)">Version control, branching, code review</div>
           </div>
 
           <div class="visibility z-9 relative  flex flex-col gap-[20px] items-center max-w-[180px] h-[170px] p-[20px] w-full bg-(--color-secondary) dark:bg-(--color-secondary-lightBrown2) rounded-[16px]">
-            <div class="absolute  w-[36px] h-[36px] top-1/2 -translate-y-1/2 right-[-32px]"><img class="w-[36px] h-[36px]" src="src/assets/photos/section3/why_me/right-arrow.png" alt=""></div>
-            <div class="w-[45px] h-[45px]"><img class="w-[45px] h-[45px]" src="src/assets/photos/section3/why_me/fast_learner.png" alt=""></div>
+<!--            <div class="absolute  w-[36px] h-[36px] top-1/2 -translate-y-1/2 right-[-32px]"><img class="hidden xl:block w-[36px] h-[36px]" src="src/assets/photos/section3/why_me/right-arrow.png" alt=""></div>-->
+            <div class="w-[45px] h-[45px]"><img class=" w-[45px] h-[45px]" src="src/assets/photos/section3/why_me/fast_learner.png" alt=""></div>
             <div data-i18n="why_me.card2_title" class="style-line relative text-center uppercase font-medium text-[10px] text-(--color-cream) leading-none">Fast Learner</div>
 
             <div data-i18n="why_me.card2_desc" class="hover absolute z-2 w-full top-[70%] bottom-0 bg-(--color-secondary-light) rounded-[16px] text-center p-[8px] text-[12px] text-(--color-text-light)">Quick adaptation to new tools, frameworks</div>
           </div>
 
           <div class="visibility relative  flex flex-col gap-[20px] items-center max-w-[180px] h-[170px] p-[20px] w-full bg-(--color-secondary) dark:bg-(--color-secondary-lightBrown2) rounded-[16px]">
-            <div class="absolute z-9 w-[36px] h-[36px] top-1/2 -translate-y-1/2 right-[-32px]"><img class="w-[36px] h-[36px]" src="src/assets/photos/section3/why_me/right-arrow.png" alt=""></div>
-            <div class="w-[45px] h-[45px]"><img class="w-[45px] h-[45px]" src="src/assets/photos/section3/why_me/responsibility.png" alt=""></div>
+<!--            <div class="absolute z-9 w-[36px] h-[36px] top-1/2 -translate-y-1/2 right-[-32px]"><img class="hidden xl:block w-[36px] h-[36px]" src="src/assets/photos/section3/why_me/right-arrow.png" alt=""></div>-->
+            <div class="w-[45px] h-[45px]"><img class=" w-[45px] h-[45px]" src="src/assets/photos/section3/why_me/responsibility.png" alt=""></div>
             <div data-i18n="why_me.card3_title" class="style-line relative text-center uppercase font-medium text-[10px] text-(--color-cream) leading-none">Responsibility</div>
 
             <div data-i18n="why_me.card3_desc" class="hover absolute z-2 w-full top-[70%] bottom-0 bg-(--color-secondary-light) rounded-[16px] text-center p-[8px] text-[12px] text-(--color-text-light)">Strict adherence to deadlines </div>
           </div>
 
           <div class="visibility z-8 relative  flex flex-col gap-[20px] items-center max-w-[180px] h-[170px] p-[20px] w-full bg-(--color-secondary) dark:bg-(--color-secondary-lightBrown2) rounded-[16px]">
-            <div class="w-[45px] h-[45px]"><img class="w-[45px] h-[45px]" src="src/assets/photos/section3/why_me/attention.png" alt=""></div>
+            <div class="w-[45px] h-[45px]"><img class=" w-[45px] h-[45px]" src="src/assets/photos/section3/why_me/attention.png" alt=""></div>
             <div data-i18n="why_me.card4_title" class="style-line relative text-center uppercase font-medium text-[10px] text-(--color-cream) leading-none">Attention to Detail</div>
 
             <div data-i18n="why_me.card4_desc" class="hover absolute z-2 w-full top-[70%] bottom-0 bg-(--color-secondary-light) rounded-[16px] text-center p-[8px] text-[12px] text-(--color-text-light)">Pixel-perfect layout, clean styling</div>
@@ -553,31 +559,31 @@
       </div>
 
 <!--     my works-->
-      <div  class="max-w-[800px] w-full  mt-[50px] bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown2) pt-[40px] pb-[60px] px-[30px]">
+      <div  class=" w-full  mt-[50px] bg-(--color-block-main) dark:bg-(--color-secondary-lightBrown2) pt-[40px] pb-[60px] px-[30px]">
 
-        <div class="flex flex-col gap-[30px]">
-          <div class="w-full flex flex-col gap-[10px]">
-            <h3 data-i18n="works.title" class="subtitle uppercase font-medium text-[28px] text-(--color-cream)  leading-none">My works</h3>
-            <div class="relative h-[2px] bg-(--color-cream)">
-              <div class="absolute flex justify-center items-center w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) top-1/2 -translate-y-1/2 left-[30%]">
+        <div class="flex flex-col  gap-[30px]">
+          <div class="w-fit xl:w-full mx-auto xl:mx-0 flex flex-col gap-[10px]">
+            <h3 data-i18n="works.title" class="subtitle uppercase text-center xl:text-left font-medium text-[22px] md:text-[28px] text-(--color-cream)  leading-none">My works</h3>
+            <div class="relative inline-block mx-auto w-[100%] xl:mx-0 h-[2px] bg-(--color-cream)">
+              <div class="absolute  justify-center items-center w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) top-1/2 -translate-y-1/2 hidden xl:flex md:left-[75%]  xl:left-[31%]">
                 <span class="text-(--color-secondary) text-[16px] font-bold">03</span>
               </div>
             </div>
           </div>
 
 
-          <div class="flex justify-between gap-[40px] items-start bg-(--color-main) dark:bg-(--color-secondary-dark-beige) rounded-[16px] p-[30px]">
-            <p data-i18n="works.description" class="text-(--color-cream) dark:text-(--color-secondary-darkerBrown) font-medium text-[16px] max-w-[430px] w-full">My projects show how I combine design and coding skills to create websites that look good and work well on any device</p>
+          <div class="flex flex-wrap justify-center xl:justify-between gap-[40px] items-start bg-(--color-main) dark:bg-(--color-secondary-dark-beige) rounded-[16px] p-[30px]">
+            <p data-i18n="works.description" class="text-(--color-cream) dark:text-(--color-secondary-darkerBrown) text-center xl:text-left font-medium text-[16px] max-w-[430px] w-full">My projects show how I combine design and coding skills to create websites that look good and work well on any device</p>
             <a href="./portfolio.html" target="_blank" data-i18n="works.button" class="btn-secondary">MY PORTFOLIO</a>
           </div>
         </div>
 
         <!--     contacts-->
         <div id="contacts" class="flex flex-col gap-[30px] mt-[50px]">
-          <div class="w-full flex flex-col gap-[10px]">
-            <h3 data-i18n="contacts.title" class="subtitle text-end uppercase font-medium text-[28px] text-(--color-cream)  leading-none">Contacts</h3>
-            <div class="relative h-[2px] bg-(--color-cream)">
-              <div class="absolute flex justify-center items-center w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) top-1/2 -translate-y-1/2 left-[71%]">
+          <div class="w-fit xl:w-full mx-auto xl:mx-0 flex flex-col gap-[10px]">
+            <h3 data-i18n="contacts.title" class="subtitle text-end uppercase font-medium text-[22px] md:text-[28px] text-(--color-cream)  leading-none">Contacts</h3>
+            <div class="relative inline-block mx-auto w-[100%] xl:mx-0 h-[2px] bg-(--color-cream)">
+              <div class="absolute justify-center items-center w-[35px] h-[35px] rounded-[50%] bg-(--color-cream) top-1/2 -translate-y-1/2 hidden xl:flex md:left-[35%] xl:left-[68%]">
                 <span class="text-(--color-secondary) text-[16px] font-bold">04</span>
               </div>
             </div>
@@ -585,15 +591,15 @@
 
           <p data-i18n="contacts.description" class="text-(--color-cream) text-[16px] text-center">You can always find me on these social platforms — I’m open to communication, feedback, and happy to collaborate</p>
 
-          <div class="flex flex-wrap justify-around gap-x-[120px] gap-y-[30px] bg-(--color-main) dark:bg-(--color-secondary-dark-beige) rounded-[16px] p-[30px]">
+          <div class="flex flex-wrap justify-center xl:justify-around gap-x-[65px] gap-y-[30px] bg-(--color-main) dark:bg-(--color-secondary-dark-beige) rounded-[16px] p-[30px]">
 
-            <a href="https://github.com/Annet2804" target="_blank" rel="noopener noreferrer" class="w-[80px] h-[80px] bg-(--color-cream) rounded-[50%]"><img class="animation-scale" alt="" src="src/assets/photos/section2/contacts/github.png"></a>
-            <a href="https://t.me/ann_1_2804" target="_blank" rel="noopener noreferrer" class="w-[84px] h-[84px]  rounded-[50%]"><img class="animation-scale" alt="" src="src/assets/photos/section2/contacts/Telegram.png"></a>
-            <a href="https://wa.me/380957215737" target="_blank" rel="noopener noreferrer" class="w-[80px] h-[80px] bg-(--color-cream) rounded-[50%]"><img class="animation-scale" alt="" src="src/assets/photos/section2/contacts/whatsapp.png"></a>
+            <a href="https://github.com/Annet2804" target="_blank" rel="noopener noreferrer" class=" w-[40px] h-[40px] md:w-[50px] md:h-[50px] xl:w-[80px] xl:h-[80px] bg-(--color-cream) rounded-[50%]"><img class="animation-scale" alt="" src="src/assets/photos/section2/contacts/github.png"></a>
+            <a href="https://t.me/ann_1_2804" target="_blank" rel="noopener noreferrer" class="  w-[40px] h-[40px] md:w-[50px] md:h-[50px] xl:w-[80px] xl:h-[80px]  rounded-[50%]"><img class="animation-scale" alt="" src="src/assets/photos/section2/contacts/Telegram.png"></a>
+            <a href="https://wa.me/380957215737" target="_blank" rel="noopener noreferrer" class=" w-[40px] h-[40px] md:w-[50px] md:h-[50px] xl:w-[80px] xl:h-[80px] bg-(--color-cream) rounded-[50%]"><img class="animation-scale" alt="" src="src/assets/photos/section2/contacts/whatsapp.png"></a>
 
-            <a href="viber://chat?number=%2B380957215737" target="_blank" rel="noopener noreferrer" class="w-[80px] h-[80px] bg-(--color-cream) rounded-[50%]"><img class="animation-scale" alt="" src="src/assets/photos/section2/contacts/viber.png"></a>
-            <a href="https://www.instagram.com/annet_2804?knvt=MTFlNXQxd3p5OTRmNA==" target="_blank" rel="noopener noreferrer" class="w-[80px] h-[80px] bg-(--color-cream) rounded-[50%]"><img class="animation-scale" alt="" src="src/assets/photos/section2/contacts/instagram.png"></a>
-            <a href="https://www.behance.net/14fd6204" target="_blank" rel="noopener noreferrer" class="w-[80px] h-[80px] bg-(--color-cream) rounded-[50%]"><img class="animation-scale" alt="" src="src/assets/photos/section2/contacts/behance.png"></a>
+            <a href="viber://chat?number=%2B380957215737" target="_blank" rel="noopener noreferrer" class=" w-[40px] h-[40px] md:w-[50px] md:h-[50px] xl:w-[80px] xl:h-[80px] bg-(--color-cream) rounded-[50%]"><img class="animation-scale" alt="" src="src/assets/photos/section2/contacts/viber.png"></a>
+            <a href="https://www.instagram.com/annet_2804?knvt=MTFlNXQxd3p5OTRmNA==" target="_blank" rel="noopener noreferrer" class=" w-[40px] h-[40px] md:w-[50px] md:h-[50px] xl:w-[80px] xl:h-[80px] bg-(--color-cream) rounded-[50%]"><img class="animation-scale" alt="" src="src/assets/photos/section2/contacts/instagram.png"></a>
+            <a href="https://www.behance.net/14fd6204" target="_blank" rel="noopener noreferrer" class=" w-[40px] h-[40px] md:w-[50px] md:h-[50px] xl:w-[80px] xl:h-[80px] bg-(--color-cream) rounded-[50%]"><img class="animation-scale" alt="" src="src/assets/photos/section2/contacts/behance.png"></a>
 
           </div>
         </div>
